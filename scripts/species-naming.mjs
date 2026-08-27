@@ -26,11 +26,16 @@ export const titleCase = (s) => s.split(/[- ]/).map(w => w.charAt(0).toUpperCase
 // Species-specific exceptions that don't follow the generic Mega/
 // regional-suffix pattern below. Checked FIRST.
 export const SPECIAL_FORM_RULES = [
-  // Floette's "Eternal Flower" form isn't really a Mega Evolution, but
-  // this asset library files its art as "Mega Floette" anyway — the
-  // real species identity (for stats + export) is Floette-Eternal.
-  { test: /^floette-?(mega|eternal)$/,
-    asset: () => "Mega Floette", display: () => "Floette-Eternal", slug: () => "floette-eternal" },
+  // Floette only exists as Eternal Flower in this game (no regular
+  // color variants) — Mega Floette's export/display identity is still
+  // Floette-Eternal (only Floette-Eternal can Mega Evolve), so its name
+  // carries the "-Eternal-Mega" suffix rather than bare "-Mega".
+  { test: /^floette-?mega$/,
+    asset: () => "Mega Floette", display: () => "Floette-Eternal-Mega", slug: () => null },
+  { test: /^floette-?eternal$/,
+    asset: () => "Floette Eternal Flower", display: () => "Floette-Eternal", slug: () => "floette-eternal" },
+  { test: /^floette$/,
+    asset: () => "Floette", display: () => "Floette-Eternal", slug: () => "floette-eternal" },
 
   // Lycanroc: asset filenames use the literal word "Form"; Showdown/
   // PokeAPI use a hyphen suffix, and Midday has none (it's the default).
@@ -39,10 +44,12 @@ export const SPECIAL_FORM_RULES = [
   { test: /^lycanrocmidday$/,
     asset: () => "Lycanroc Midday Form", display: () => "Lycanroc", slug: () => "lycanroc" },
 
-  // Aegislash: only Blade forme needs this — Shield is the default/base
-  // entry and already goes through the normal path.
+  // Aegislash: only Blade forme needs the name/asset override — Shield
+  // is the default/base entry and already goes through the normal path.
+  // Stats: Shield forme's numbers are used for every Aegislash reference
+  // (Blade isn't independently trackable/selectable on the ladder).
   { test: /^aegislash-?blade$/,
-    asset: () => "Aegislash Blade Forme", display: () => "Aegislash-Blade", slug: () => "aegislash-blade" },
+    asset: () => "Aegislash Blade Forme", display: () => "Aegislash-Blade", slug: () => "aegislash" },
 
   // Vivillon: cosmetic wing patterns, all sharing the "{Pattern} Pattern"
   // asset-name shape. The bare "vivillon" ID (no pattern — Showdown
@@ -82,16 +89,17 @@ export const SPECIAL_FORM_RULES = [
     asset: (m) => `Gourgeist ${titleCase(m[1])}`, display: (m) => `Gourgeist-${titleCase(m[1])}`, slug: (m) => `gourgeist-${m[1]}` },
 
   // Meowstic: male (default, no suffix) and female are separate species
-  // as far as sprites/stats go — must never share art. Mega forms are
-  // this game's own addition (not in mainline), so the asset-name guess
-  // is unconfirmed — if these sprites still 404, the real filenames are
-  // needed to fix this precisely.
+  // as far as sprites/stats go for the REGULAR forms — must never share
+  // art. Mega forms are different: confirmed both genders share ONE
+  // sprite (https://championsbattledata.com/pokemon_champions_assets/pokemon/Mega%20Meowstic.png,
+  // no gender in the filename) and identical stats/type. PokeAPI slugs
+  // confirmed directly: meowstic-male-mega / meowstic-female-mega.
   { test: /^meowsticf$/,
     asset: () => "Meowstic F", display: () => "Meowstic-F", slug: () => "meowstic-f" },
   { test: /^meowstic-?f-?mega$/,
-    asset: () => "Mega Meowstic F", display: () => "Meowstic-F-Mega", slug: () => "meowstic-f" }, // PokeAPI has no Mega Meowstic — falls back to base female stats
+    asset: () => "Mega Meowstic", display: () => "Meowstic-F-Mega", slug: () => "meowstic-female-mega" },
   { test: /^meowstic-?m?-?mega$/,
-    asset: () => "Mega Meowstic M", display: () => "Meowstic-M-Mega", slug: () => "meowstic" }, // PokeAPI has no Mega Meowstic — falls back to base male stats
+    asset: () => "Mega Meowstic", display: () => "Meowstic-M-Mega", slug: () => "meowstic-male-mega" },
 ];
 
 export function matchSpecialForm(chaosKey){
@@ -164,28 +172,45 @@ export function guessChampionsAssetName(chaosKey){
 // ---------------------------------------------------------------------
 
 // A handful of saved_names don't reduce to a clean Smogon ID by pattern
-// alone (Floette's "Eternal Flower" isn't really a Mega, for instance).
-const SAVED_NAME_OVERRIDES = {
-  "Mega Floette": { smogonId: "floetteeternal", displayName: "Floette-Eternal", pokeApiSlug: "floette-eternal" },
-};
+// alone. Floette is handled directly in deriveShowdownId/deriveDisplayName/
+// derivePokeApiSlug (it only exists as Eternal Flower in this game — see
+// those functions for why a table entry here wasn't reliable enough).
+const SAVED_NAME_OVERRIDES = {};
 
 // Species whose forms are cosmetic only — they don't change stats,
 // abilities, or anything battle-relevant, so the display/export name
 // should ALWAYS be just the base species, regardless of which specific
-// trim/color/pattern it is. (They still get their own showdownId
-// internally, for correct per-variant usage-stat tracking — only the
-// user-facing name collapses.)
-const COSMETIC_ONLY_BASE_SPECIES = new Set(["furfrou", "florges", "vivillon", "floette"]);
+// trim/color/pattern it is. Floette is NOT here — handled separately.
+const COSMETIC_ONLY_BASE_SPECIES = new Set(["furfrou", "florges", "vivillon"]);
 
 export function deriveShowdownId(row) {
+  // Floette only exists as the Eternal Flower form in this game — no
+  // regular color variants at all. championsbattledata's own saved_name
+  // for it is unqualified "Floette" (not "Floette Red Flower" or
+  // similar), which was silently being treated as a generic default
+  // form and landing on the wrong ("floette") ID instead of the correct
+  // "floetteeternal" one. Mega Floette gets its own distinct ID too
+  // (it's a real, separate ladder entry) — but its EXPORT identity is
+  // still Floette-Eternal, handled via the "-Mega" suffix in the
+  // display name below rather than here.
+  if (toId(row.base_name) === "floette") {
+    return /mega/i.test(row.saved_name || "") ? "floettemega" : "floetteeternal";
+  }
+
   const override = SAVED_NAME_OVERRIDES[row.saved_name];
   if (override) return override.smogonId;
 
   const base = toId(row.base_name);
+  if (COSMETIC_ONLY_BASE_SPECIES.has(base)) return base;
   let s = (row.saved_name || "").trim();
-  s = s.replace(/\s+(Form|Forme|Pattern|Flower|Breed)$/i, "").trim();
+  s = s.replace(/\s+(Form|Forme|Pattern|Flower|Breed|Variety)$/i, "").trim();
 
   let m;
+  // Gender-specific Mega (Meowstic) — the generic single-letter X/Y/Z
+  // check below doesn't recognize "F"/"M", so without this, both
+  // genders silently collapsed to the same ID and overwrote each other.
+  if ((m = s.match(/^Mega\s+.+?\s+(Female|F)$/i))) return base + "fmega";
+  if ((m = s.match(/^Mega\s+.+?\s+(Male|M)$/i))) return base + "mega";
   if ((m = s.match(/^Mega\s+.+?\s+([XYZ])$/i))) return base + "mega" + m[1].toLowerCase();
   if (/^Mega\s+/i.test(s)) return base + "mega";
   if (/^Alolan\s+/i.test(s)) return base + "alola";
@@ -207,6 +232,14 @@ export function deriveShowdownId(row) {
 }
 
 export function deriveDisplayName(row) {
+  // See deriveShowdownId — Floette only exists as Eternal Flower in this
+  // game. Mega Floette displays as "Floette-Eternal-Mega" (not
+  // "Floette-Mega") so that stripping the "-Mega" suffix for export
+  // correctly lands on "Floette-Eternal", never bare "Floette".
+  if (toId(row.base_name) === "floette") {
+    return /mega/i.test(row.saved_name || "") ? "Floette-Eternal-Mega" : "Floette-Eternal";
+  }
+
   const override = SAVED_NAME_OVERRIDES[row.saved_name];
   if (override) return override.displayName;
 
@@ -214,9 +247,11 @@ export function deriveDisplayName(row) {
   if (COSMETIC_ONLY_BASE_SPECIES.has(toId(row.base_name))) return base;
 
   let s = (row.saved_name || "").trim();
-  s = s.replace(/\s+(Form|Forme|Pattern|Flower|Breed)$/i, "").trim();
+  s = s.replace(/\s+(Form|Forme|Pattern|Flower|Breed|Variety)$/i, "").trim();
 
   let m;
+  if ((m = s.match(/^Mega\s+.+?\s+(Female|F)$/i))) return `${base}-F-Mega`;
+  if ((m = s.match(/^Mega\s+.+?\s+(Male|M)$/i))) return `${base}-M-Mega`;
   if ((m = s.match(/^Mega\s+.+?\s+([XYZ])$/i))) return `${base}-Mega-${m[1].toUpperCase()}`;
   if (/^Mega\s+/i.test(s)) return `${base}-Mega`;
   if (/^Alolan\s+/i.test(s)) return `${base}-Alola`;
@@ -243,14 +278,47 @@ export function deriveDisplayName(row) {
 // generic suffixes the way the chaos-key-only guessPokeApiSlug can
 // (that one only recognizes Mega/regional suffixes — this recognizes
 // anything, since it has the real base_name to work from).
+// Row-based PokeAPI slug overrides — for species where the generic
+// suffix-stripping logic below either can't resolve to a real PokeAPI
+// entry, or where you've asked for a deliberately simplified answer.
+// Checked before the generic logic in derivePokeApiSlug.
+function rowPokeApiSlugOverride(row) {
+  const base = toId(row.base_name);
+  if (base === "aegislash") return "aegislash"; // Shield forme's stats for every Aegislash reference — Blade isn't independently trackable/selectable on the ladder anyway
+  if (base === "meowstic") {
+    if (/mega/i.test(row.saved_name)) {
+      // Confirmed exact PokeAPI slugs — do NOT collapse to one shared
+      // slug; each gender has its own real Mega stat block on PokeAPI.
+      return /\bf(emale)?\b/i.test(row.saved_name) ? "meowstic-female-mega" : "meowstic-male-mega";
+    }
+    if (/\bf(emale)?\b/i.test(row.saved_name)) return "meowstic-f";
+    return "meowstic";
+  }
+  if (base === "floette") {
+    // Only exists as Eternal Flower in this game — always the real
+    // "floette-eternal" PokeAPI slug, never bare "floette" (which would
+    // silently give the wrong, mainline-default Floette's stats).
+    // Mega Floette has no PokeAPI entry at all — "NONE" tells the
+    // caller to stop here rather than fall through to generic pattern
+    // matching, which would otherwise guess a wrong slug like
+    // "floette-mega" (null alone isn't enough to signal that, since
+    // this function also returns null for "not one of my species").
+    return /mega/i.test(row.saved_name || "") ? "NONE" : "floette-eternal";
+  }
+  return null;
+}
+
 export function derivePokeApiSlug(row) {
   const override = SAVED_NAME_OVERRIDES[row.saved_name];
   if (override?.pokeApiSlug) return override.pokeApiSlug;
+  const rowOverride = rowPokeApiSlugOverride(row);
+  if (rowOverride === "NONE") return null; // explicitly no PokeAPI stats exist — caller falls back to Champions' own numbers
+  if (rowOverride) return rowOverride;
   if (COSMETIC_ONLY_BASE_SPECIES.has(toId(row.base_name))) return toId(row.base_name);
 
   const base = toId(row.base_name);
   let s = (row.saved_name || "").trim();
-  s = s.replace(/\s+(Form|Forme|Pattern|Flower|Breed)$/i, "").trim();
+  s = s.replace(/\s+(Form|Forme|Pattern|Flower|Breed|Variety)$/i, "").trim();
 
   let m;
   if ((m = s.match(/^Mega\s+.+?\s+([XYZ])$/i))) return `${base}-mega-${m[1].toLowerCase()}`;
@@ -266,7 +334,12 @@ export function derivePokeApiSlug(row) {
     const suffix = s.slice(speciesTitle.length).trim();
     if (!suffix) return base;
     if (/^female$/i.test(suffix)) return `${base}-female`;
-    if (/^(male|shield|average)$/i.test(suffix)) return base;
+    if (/^(male|shield)$/i.test(suffix)) return base;
+    // Average is the implicit default everywhere ELSE on this site
+    // (Gourgeist/Pumpkaboo show as bare "Gourgeist" in the name/export),
+    // but PokeAPI has no bare entry for these — it requires the explicit
+    // "-average" suffix. Confirmed: slug is gourgeist-average.
+    if (/^average$/i.test(suffix)) return `${base}-average`;
     return `${base}-${toId(suffix)}`;
   }
   return base;

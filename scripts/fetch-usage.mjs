@@ -395,7 +395,19 @@ async function parseChaosJson(chaos) {
       checks: checksEntries(stats["Checks and Counters"], DETAIL_LIMITS.checks, resolveName),
     });
   }
-  return result.sort((a, b) => b.usage - a.usage);
+  // Some species have more than one raw chaos.json ID that correctly
+  // resolve to the SAME display name (confirmed case: Smogon apparently
+  // tracks both "floettemega" and "floetteeternal" as separate ladder
+  // picks, even though they're the same real Pokémon — our naming
+  // correctly renames both to "Floette-Eternal", which then shows up
+  // as two identical, ambiguously-selectable sidebar rows unless
+  // deduplicated here). Keep whichever duplicate has higher usage.
+  const byName = new Map();
+  for (const mon of result) {
+    const existing = byName.get(mon.name);
+    if (!existing || mon.usage > existing.usage) byName.set(mon.name, mon);
+  }
+  return [...byName.values()].sort((a, b) => b.usage - a.usage);
 }
 
 async function run() {

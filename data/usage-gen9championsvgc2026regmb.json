@@ -1567,7 +1567,7 @@
             "pct": 0
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 0
           },
           {
@@ -2430,7 +2430,7 @@
             "pct": 0
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 0
           },
           {
@@ -3133,20 +3133,20 @@
         ]
       },
       {
-        "name": "Floette-Eternal",
+        "name": "Floette-Eternal-Mega",
         "types": [
           "Fairy"
         ],
         "sprite": "assets/sprites/floettemega.png",
         "baseStats": {
-          "hp": 74,
-          "attack": 65,
-          "defense": 67,
-          "sp_attack": 125,
-          "sp_defense": 128,
-          "speed": 92
+          "hp": 149,
+          "attack": 105,
+          "defense": 107,
+          "sp_attack": 175,
+          "sp_defense": 168,
+          "speed": 122
         },
-        "baseStatTotal": 551,
+        "baseStatTotal": 826,
         "usage": 8.1,
         "teammates": [
           {
@@ -3741,7 +3741,7 @@
         ],
         "checks": [
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 0
           },
           {
@@ -4421,7 +4421,7 @@
             "pct": 0
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 0
           }
         ]
@@ -6068,7 +6068,7 @@
             "pct": 0
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 0
           },
           {
@@ -7598,7 +7598,7 @@
             "pct": 0
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 0
           },
           {
@@ -10313,7 +10313,7 @@
             "pct": 19.7
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 18.2
           },
           {
@@ -11448,7 +11448,7 @@
             "pct": 0
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 0
           },
           {
@@ -12282,7 +12282,7 @@
             "pct": 0
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 0
           },
           {
@@ -12821,7 +12821,7 @@
             "pct": 0
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 0
           },
           {
@@ -13524,7 +13524,7 @@
             "pct": 0
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 0
           },
           {
@@ -14219,7 +14219,7 @@
             "pct": 0
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 0
           }
         ]
@@ -16172,7 +16172,7 @@
             "pct": 0
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 0
           },
           {
@@ -19348,7 +19348,7 @@
             "pct": 0
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 0
           }
         ]
@@ -20019,7 +20019,7 @@
             "pct": 0
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 0
           },
           {
@@ -20374,7 +20374,7 @@
             "pct": 31.7
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 25.5
           },
           {
@@ -20730,7 +20730,7 @@
             "pct": 13.7
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 9.6
           },
           {
@@ -24471,7 +24471,7 @@
             "pct": 0
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 0
           },
           {
@@ -25624,7 +25624,7 @@
         ],
         "checks": [
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 0
           },
           {
@@ -26745,7 +26745,7 @@
             "pct": 0
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 0
           },
           {
@@ -27635,7 +27635,7 @@
             "pct": 0
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 0
           },
           {
@@ -29481,7 +29481,7 @@
             "pct": 0
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 0
           },
           {
@@ -34230,7 +34230,7 @@
             "pct": 0
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 0
           },
           {
@@ -35264,7 +35264,7 @@
         ],
         "checks": [
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 0
           },
           {
@@ -38593,7 +38593,7 @@
             "pct": 39.5
           },
           {
-            "name": "Florges Red Flower",
+            "name": "Florges",
             "pct": 9.1
           }
         ],
@@ -39983,11 +39983,18 @@
       {
         "name": "Meowstic-M-Mega",
         "types": [
-          "Unknown"
+          "Psychic"
         ],
-        "sprite": null,
-        "baseStats": null,
-        "baseStatTotal": null,
+        "sprite": "assets/sprites/meowsticmmega.png",
+        "baseStats": {
+          "hp": 74,
+          "attack": 48,
+          "defense": 76,
+          "sp_attack": 143,
+          "sp_defense": 101,
+          "speed": 124
+        },
+        "baseStatTotal": 566,
         "usage": 0.2,
         "teammates": [
           {
@@ -40994,11 +41001,18 @@
       {
         "name": "Meowstic-F-Mega",
         "types": [
-          "Unknown"
+          "Psychic"
         ],
-        "sprite": null,
-        "baseStats": null,
-        "baseStatTotal": null,
+        "sprite": "assets/sprites/meowsticfmega.png",
+        "baseStats": {
+          "hp": 74,
+          "attack": 48,
+          "defense": 76,
+          "sp_attack": 143,
+          "sp_defense": 101,
+          "speed": 124
+        },
+        "baseStatTotal": 566,
         "usage": 0.1,
         "teammates": [
           {
@@ -42030,7 +42044,7 @@
         ]
       },
       {
-        "name": "Florges Red Flower",
+        "name": "Florges",
         "types": [
           "Fairy"
         ],
@@ -43238,7 +43252,7 @@
             "pct": 0
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 0
           },
           {
@@ -43593,7 +43607,7 @@
             "pct": 0
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 0
           },
           {
@@ -48036,7 +48050,7 @@
         ]
       },
       {
-        "name": "Furfrou Natural Form",
+        "name": "Furfrou",
         "types": [
           "Normal"
         ],
@@ -49619,7 +49633,7 @@
         ]
       },
       {
-        "name": "Gourgeist Small Variety",
+        "name": "Gourgeist-Small",
         "types": [
           "Ghost",
           "Grass"
@@ -52008,7 +52022,7 @@
         ]
       },
       {
-        "name": "Gourgeist Large Variety",
+        "name": "Gourgeist-Large",
         "types": [
           "Ghost",
           "Grass"
@@ -53851,7 +53865,7 @@
             "pct": 0
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 0
           },
           {
@@ -54714,7 +54728,7 @@
             "pct": 0
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 0
           },
           {
@@ -55088,20 +55102,20 @@
         ]
       },
       {
-        "name": "Floette-Eternal",
+        "name": "Floette-Eternal-Mega",
         "types": [
           "Fairy"
         ],
         "sprite": "assets/sprites/floettemega.png",
         "baseStats": {
-          "hp": 74,
-          "attack": 65,
-          "defense": 67,
-          "sp_attack": 125,
-          "sp_defense": 128,
-          "speed": 92
+          "hp": 149,
+          "attack": 105,
+          "defense": 107,
+          "sp_attack": 175,
+          "sp_defense": 168,
+          "speed": 122
         },
-        "baseStatTotal": 551,
+        "baseStatTotal": 826,
         "usage": 9.3,
         "teammates": [
           {
@@ -56026,7 +56040,7 @@
         ],
         "checks": [
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 0
           },
           {
@@ -56705,7 +56719,7 @@
             "pct": 0
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 0
           }
         ]
@@ -58200,7 +58214,7 @@
             "pct": 0
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 0
           },
           {
@@ -58876,7 +58890,7 @@
             "pct": 0
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 0
           }
         ]
@@ -60238,7 +60252,7 @@
             "pct": 0
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 0
           },
           {
@@ -62298,7 +62312,7 @@
             "pct": 23
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 19.8
           },
           {
@@ -63409,7 +63423,7 @@
             "pct": 0
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 0
           },
           {
@@ -63756,7 +63770,7 @@
             "pct": 0
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 0
           },
           {
@@ -64076,7 +64090,7 @@
             "pct": 0
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 0
           },
           {
@@ -64569,7 +64583,7 @@
             "pct": 0
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 0
           }
         ]
@@ -67129,7 +67143,7 @@
             "pct": 0
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 0
           },
           {
@@ -68789,7 +68803,7 @@
             "pct": 0
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 0
           },
           {
@@ -71674,7 +71688,7 @@
             "pct": 0
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 0
           },
           {
@@ -72032,7 +72046,7 @@
             "pct": 0
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 0
           },
           {
@@ -72079,7 +72093,7 @@
             "pct": 43.3
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 34.2
           },
           {
@@ -73578,7 +73592,7 @@
             "pct": 16
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 13.5
           },
           {
@@ -74372,7 +74386,7 @@
             "pct": 0
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 0
           },
           {
@@ -77019,7 +77033,7 @@
         ],
         "checks": [
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 0
           },
           {
@@ -80976,7 +80990,7 @@
             "pct": 0
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 0
           },
           {
@@ -81915,7 +81929,7 @@
             "pct": 0
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 0
           },
           {
@@ -82916,7 +82930,7 @@
             "pct": 0
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 0
           },
           {
@@ -84941,7 +84955,7 @@
             "pct": 0
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 0
           },
           {
@@ -90355,7 +90369,7 @@
             "pct": 11.1
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 10.9
           },
           {
@@ -91732,11 +91746,18 @@
       {
         "name": "Meowstic-M-Mega",
         "types": [
-          "Unknown"
+          "Psychic"
         ],
-        "sprite": null,
-        "baseStats": null,
-        "baseStatTotal": null,
+        "sprite": "assets/sprites/meowsticmmega.png",
+        "baseStats": {
+          "hp": 74,
+          "attack": 48,
+          "defense": 76,
+          "sp_attack": 143,
+          "sp_defense": 101,
+          "speed": 124
+        },
+        "baseStatTotal": 566,
         "usage": 0.1,
         "teammates": [
           {
@@ -92763,11 +92784,18 @@
       {
         "name": "Meowstic-F-Mega",
         "types": [
-          "Unknown"
+          "Psychic"
         ],
-        "sprite": null,
-        "baseStats": null,
-        "baseStatTotal": null,
+        "sprite": "assets/sprites/meowsticfmega.png",
+        "baseStats": {
+          "hp": 74,
+          "attack": 48,
+          "defense": 76,
+          "sp_attack": 143,
+          "sp_defense": 101,
+          "speed": 124
+        },
+        "baseStatTotal": 566,
         "usage": 0.1,
         "teammates": [
           {
@@ -94155,7 +94183,7 @@
         ]
       },
       {
-        "name": "Florges Red Flower",
+        "name": "Florges",
         "types": [
           "Fairy"
         ],
@@ -100187,7 +100215,7 @@
             "pct": 12
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 11.6
           }
         ],
@@ -100601,7 +100629,7 @@
         "checks": []
       },
       {
-        "name": "Gourgeist Small Variety",
+        "name": "Gourgeist-Small",
         "types": [
           "Ghost",
           "Grass"
@@ -101217,7 +101245,7 @@
         "checks": []
       },
       {
-        "name": "Furfrou Natural Form",
+        "name": "Furfrou",
         "types": [
           "Normal"
         ],
@@ -102420,7 +102448,7 @@
         "checks": []
       },
       {
-        "name": "Gourgeist Large Variety",
+        "name": "Gourgeist-Large",
         "types": [
           "Ghost",
           "Grass"
@@ -103773,7 +103801,7 @@
             "pct": 32.3
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 19.8
           },
           {
@@ -104053,7 +104081,7 @@
             "pct": 0
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 0
           },
           {
@@ -104109,7 +104137,7 @@
             "pct": 23.8
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 22.9
           }
         ],
@@ -105092,7 +105120,7 @@
         ],
         "checks": [
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 0
           },
           {
@@ -105298,20 +105326,20 @@
         ]
       },
       {
-        "name": "Floette-Eternal",
+        "name": "Floette-Eternal-Mega",
         "types": [
           "Fairy"
         ],
         "sprite": "assets/sprites/floettemega.png",
         "baseStats": {
-          "hp": 74,
-          "attack": 65,
-          "defense": 67,
-          "sp_attack": 125,
-          "sp_defense": 128,
-          "speed": 92
+          "hp": 149,
+          "attack": 105,
+          "defense": 107,
+          "sp_attack": 175,
+          "sp_defense": 168,
+          "speed": 122
         },
-        "baseStatTotal": 551,
+        "baseStatTotal": 826,
         "usage": 12.1,
         "teammates": [
           {
@@ -106397,7 +106425,7 @@
             "pct": 0
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 0
           },
           {
@@ -106553,7 +106581,7 @@
             "pct": 0
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 0
           }
         ]
@@ -106864,7 +106892,7 @@
         ],
         "checks": [
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 0
           },
           {
@@ -107414,7 +107442,7 @@
             "pct": 0
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 0
           },
           {
@@ -108378,7 +108406,7 @@
             "pct": 0
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 0
           },
           {
@@ -108894,7 +108922,7 @@
             "pct": 0
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 0
           },
           {
@@ -111817,7 +111845,7 @@
             "pct": 0
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 0
           },
           {
@@ -113035,7 +113063,7 @@
             "pct": 28.7
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 20.7
           },
           {
@@ -113786,7 +113814,7 @@
             "pct": 0
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 0
           },
           {
@@ -114157,7 +114185,7 @@
             "pct": 0
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 0
           },
           {
@@ -114517,7 +114545,7 @@
             "pct": 0
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 0
           }
         ]
@@ -118722,7 +118750,7 @@
             "pct": 19.5
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 16
           },
           {
@@ -122194,7 +122222,7 @@
             "pct": 61.2
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 53.6
           },
           {
@@ -125121,7 +125149,7 @@
             "pct": 20.4
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 19.3
           }
         ],
@@ -125933,7 +125961,7 @@
             "pct": 19.7
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 18.6
           }
         ],
@@ -127957,7 +127985,7 @@
             "pct": 18.9
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 18.6
           },
           {
@@ -128377,7 +128405,7 @@
             "pct": 38
           },
           {
-            "name": "Florges Red Flower",
+            "name": "Florges",
             "pct": 12.8
           }
         ],
@@ -129660,7 +129688,7 @@
             "pct": 22.9
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 22.3
           },
           {
@@ -129819,7 +129847,7 @@
             "pct": 37.9
           },
           {
-            "name": "Gourgeist Large Variety",
+            "name": "Gourgeist-Large",
             "pct": 20.6
           },
           {
@@ -132783,7 +132811,7 @@
             "pct": 31.9
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 25.1
           },
           {
@@ -133791,7 +133819,7 @@
             "pct": 28.9
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 28.7
           },
           {
@@ -134802,7 +134830,7 @@
             "pct": 20.8
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 18.9
           },
           {
@@ -137067,7 +137095,7 @@
             "pct": 22.4
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 19.5
           },
           {
@@ -138833,11 +138861,18 @@
       {
         "name": "Meowstic-F-Mega",
         "types": [
-          "Unknown"
+          "Psychic"
         ],
-        "sprite": null,
-        "baseStats": null,
-        "baseStatTotal": null,
+        "sprite": "assets/sprites/meowsticfmega.png",
+        "baseStats": {
+          "hp": 74,
+          "attack": 48,
+          "defense": 76,
+          "sp_attack": 143,
+          "sp_defense": 101,
+          "speed": 124
+        },
+        "baseStatTotal": 566,
         "usage": 0.1,
         "teammates": [
           {
@@ -139756,7 +139791,7 @@
             "pct": 17.6
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 16.9
           }
         ],
@@ -139999,7 +140034,7 @@
         "checks": []
       },
       {
-        "name": "Florges Red Flower",
+        "name": "Florges",
         "types": [
           "Fairy"
         ],
@@ -140613,7 +140648,7 @@
         "checks": []
       },
       {
-        "name": "Gourgeist Large Variety",
+        "name": "Gourgeist-Large",
         "types": [
           "Ghost",
           "Grass"
@@ -141529,11 +141564,18 @@
       {
         "name": "Meowstic-M-Mega",
         "types": [
-          "Unknown"
+          "Psychic"
         ],
-        "sprite": null,
-        "baseStats": null,
-        "baseStatTotal": null,
+        "sprite": "assets/sprites/meowsticmmega.png",
+        "baseStats": {
+          "hp": 74,
+          "attack": 48,
+          "defense": 76,
+          "sp_attack": 143,
+          "sp_defense": 101,
+          "speed": 124
+        },
+        "baseStatTotal": 566,
         "usage": 0,
         "teammates": [
           {
@@ -142287,7 +142329,7 @@
             "pct": 23
           },
           {
-            "name": "Gourgeist Large Variety",
+            "name": "Gourgeist-Large",
             "pct": 23
           },
           {
@@ -143659,7 +143701,7 @@
             "pct": 79.3
           },
           {
-            "name": "Gourgeist Large Variety",
+            "name": "Gourgeist-Large",
             "pct": 63.9
           },
           {
@@ -145757,7 +145799,7 @@
             "pct": 26.4
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 24.9
           },
           {
@@ -146359,7 +146401,7 @@
             "pct": 18.9
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 16.6
           },
           {
@@ -147287,7 +147329,7 @@
             "pct": 25.9
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 16.3
           }
         ],
@@ -147712,7 +147754,7 @@
             "pct": 37.7
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 25.5
           },
           {
@@ -147871,7 +147913,7 @@
             "pct": 21
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 17.1
           }
         ],
@@ -148018,7 +148060,7 @@
             "pct": 44.6
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 32.7
           },
           {
@@ -148599,20 +148641,20 @@
         "checks": []
       },
       {
-        "name": "Floette-Eternal",
+        "name": "Floette-Eternal-Mega",
         "types": [
           "Fairy"
         ],
         "sprite": "assets/sprites/floettemega.png",
         "baseStats": {
-          "hp": 74,
-          "attack": 65,
-          "defense": 67,
-          "sp_attack": 125,
-          "sp_defense": 128,
-          "speed": 92
+          "hp": 149,
+          "attack": 105,
+          "defense": 107,
+          "sp_attack": 175,
+          "sp_defense": 168,
+          "speed": 122
         },
-        "baseStatTotal": 551,
+        "baseStatTotal": 826,
         "usage": 15,
         "teammates": [
           {
@@ -151844,7 +151886,7 @@
             "pct": 27.1
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 23.1
           }
         ],
@@ -155345,7 +155387,7 @@
             "pct": 15.7
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 15.3
           }
         ],
@@ -156182,7 +156224,7 @@
             "pct": 19.5
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 17.9
           }
         ],
@@ -163992,7 +164034,7 @@
             "pct": 55.3
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 48.3
           },
           {
@@ -165998,7 +166040,7 @@
             "pct": 28.4
           },
           {
-            "name": "Gourgeist Large Variety",
+            "name": "Gourgeist-Large",
             "pct": 26
           },
           {
@@ -166903,7 +166945,7 @@
             "pct": 22.1
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 21.2
           },
           {
@@ -168816,7 +168858,7 @@
             "pct": 32.8
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 30.3
           },
           {
@@ -169553,7 +169595,7 @@
             "pct": 32.1
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 30.5
           },
           {
@@ -170946,7 +170988,7 @@
             "pct": 24.2
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 21.4
           },
           {
@@ -173625,7 +173667,7 @@
             "pct": 65.5
           },
           {
-            "name": "Gourgeist Large Variety",
+            "name": "Gourgeist-Large",
             "pct": 60.1
           },
           {
@@ -175654,7 +175696,7 @@
             "pct": 35.7
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 22.6
           },
           {
@@ -176526,7 +176568,7 @@
         "checks": []
       },
       {
-        "name": "Gourgeist Large Variety",
+        "name": "Gourgeist-Large",
         "types": [
           "Ghost",
           "Grass"
@@ -177287,7 +177329,7 @@
             "pct": 30
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 25.5
           },
           {
@@ -178787,11 +178829,18 @@
       {
         "name": "Meowstic-F-Mega",
         "types": [
-          "Unknown"
+          "Psychic"
         ],
-        "sprite": null,
-        "baseStats": null,
-        "baseStatTotal": null,
+        "sprite": "assets/sprites/meowsticfmega.png",
+        "baseStats": {
+          "hp": 74,
+          "attack": 48,
+          "defense": 76,
+          "sp_attack": 143,
+          "sp_defense": 101,
+          "speed": 124
+        },
+        "baseStatTotal": 566,
         "usage": 0.1,
         "teammates": [
           {
@@ -179061,11 +179110,18 @@
       {
         "name": "Meowstic-M-Mega",
         "types": [
-          "Unknown"
+          "Psychic"
         ],
-        "sprite": null,
-        "baseStats": null,
-        "baseStatTotal": null,
+        "sprite": "assets/sprites/meowsticmmega.png",
+        "baseStats": {
+          "hp": 74,
+          "attack": 48,
+          "defense": 76,
+          "sp_attack": 143,
+          "sp_defense": 101,
+          "speed": 124
+        },
+        "baseStatTotal": 566,
         "usage": 0.1,
         "teammates": [
           {
@@ -179645,7 +179701,7 @@
             "pct": 26.4
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 24.5
           },
           {
@@ -180403,7 +180459,7 @@
             "pct": 40.2
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 22.5
           },
           {
@@ -183871,7 +183927,7 @@
             "pct": 34.3
           },
           {
-            "name": "Gourgeist Large Variety",
+            "name": "Gourgeist-Large",
             "pct": 34.3
           },
           {
@@ -183988,7 +184044,7 @@
         "checks": []
       },
       {
-        "name": "Florges Red Flower",
+        "name": "Florges",
         "types": [
           "Fairy"
         ],
@@ -185967,7 +186023,7 @@
         "usage": 0,
         "teammates": [
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 23.1
           },
           {
@@ -186435,7 +186491,7 @@
             "pct": 30.8
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 30
           },
           {
@@ -186594,7 +186650,7 @@
             "pct": 25.3
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 25
           },
           {
@@ -187199,7 +187255,7 @@
             "pct": 86.5
           },
           {
-            "name": "Gourgeist Large Variety",
+            "name": "Gourgeist-Large",
             "pct": 86.5
           },
           {
@@ -187812,7 +187868,7 @@
             "pct": 17.1
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 17
           }
         ],
@@ -187955,7 +188011,7 @@
             "pct": 38
           },
           {
-            "name": "Florges Red Flower",
+            "name": "Florges",
             "pct": 37
           },
           {

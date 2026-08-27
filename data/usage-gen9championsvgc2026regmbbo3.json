@@ -43,7 +43,7 @@
             "pct": 20.1
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 16.6
           }
         ],
@@ -531,7 +531,7 @@
             "pct": 0
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 0
           }
         ]
@@ -571,7 +571,7 @@
             "pct": 19.4
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 15.8
           },
           {
@@ -899,7 +899,7 @@
             "pct": 32
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 23.1
           },
           {
@@ -1259,7 +1259,7 @@
             "pct": 32.5
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 23.3
           },
           {
@@ -1760,20 +1760,20 @@
         ]
       },
       {
-        "name": "Floette-Eternal",
+        "name": "Floette-Eternal-Mega",
         "types": [
           "Fairy"
         ],
         "sprite": "assets/sprites/floettemega.png",
         "baseStats": {
-          "hp": 74,
-          "attack": 65,
-          "defense": 67,
-          "sp_attack": 125,
-          "sp_defense": 128,
-          "speed": 92
+          "hp": 149,
+          "attack": 105,
+          "defense": 107,
+          "sp_attack": 175,
+          "sp_defense": 168,
+          "speed": 122
         },
-        "baseStatTotal": 551,
+        "baseStatTotal": 826,
         "usage": 14,
         "teammates": [
           {
@@ -3555,7 +3555,7 @@
             "pct": 0
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 0
           }
         ]
@@ -4026,7 +4026,7 @@
             "pct": 0
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 0
           },
           {
@@ -4857,7 +4857,7 @@
             "pct": 0
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 0
           },
           {
@@ -6200,7 +6200,7 @@
             "pct": 0
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 0
           },
           {
@@ -6608,7 +6608,7 @@
             "pct": 32.3
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 19.9
           },
           {
@@ -8634,7 +8634,7 @@
             "pct": 0
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 0
           },
           {
@@ -8978,7 +8978,7 @@
             "pct": 0
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 0
           }
         ]
@@ -9298,7 +9298,7 @@
             "pct": 0
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 0
           },
           {
@@ -9817,7 +9817,7 @@
             "pct": 0
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 0
           }
         ]
@@ -10113,7 +10113,7 @@
             "pct": 0
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 0
           },
           {
@@ -10903,7 +10903,7 @@
             "pct": 0
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 0
           }
         ]
@@ -11067,7 +11067,7 @@
             "pct": 0
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 0
           },
           {
@@ -13448,7 +13448,7 @@
             "pct": 0
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 0
           },
           {
@@ -13896,7 +13896,7 @@
         ],
         "checks": [
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 0
           },
           {
@@ -14076,7 +14076,7 @@
         ],
         "checks": [
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 0
           },
           {
@@ -14419,7 +14419,7 @@
             "pct": 0
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 0
           },
           {
@@ -14655,7 +14655,7 @@
             "pct": 21.7
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 17.8
           }
         ],
@@ -15107,7 +15107,7 @@
             "pct": 0
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 0
           },
           {
@@ -16348,7 +16348,7 @@
             "pct": 17.3
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 16.7
           },
           {
@@ -17019,7 +17019,7 @@
             "pct": 0
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 0
           },
           {
@@ -17338,7 +17338,7 @@
             "pct": 0
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 0
           },
           {
@@ -17478,7 +17478,7 @@
         ],
         "checks": [
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 0
           },
           {
@@ -17888,7 +17888,7 @@
             "pct": 23.6
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 20.9
           },
           {
@@ -19233,7 +19233,7 @@
             "pct": 11.9
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 10.9
           }
         ],
@@ -20145,7 +20145,7 @@
             "pct": 0
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 0
           },
           {
@@ -20308,7 +20308,7 @@
             "pct": 0
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 0
           },
           {
@@ -20635,7 +20635,7 @@
         ],
         "checks": [
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 0
           },
           {
@@ -22371,7 +22371,7 @@
             "pct": 0
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 0
           },
           {
@@ -23242,7 +23242,7 @@
             "pct": 0
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 0
           },
           {
@@ -29837,7 +29837,7 @@
             "pct": 23.5
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 22.2
           },
           {
@@ -32204,7 +32204,7 @@
             "pct": 22.8
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 21
           },
           {
@@ -37282,11 +37282,18 @@
       {
         "name": "Meowstic-M-Mega",
         "types": [
-          "Unknown"
+          "Psychic"
         ],
-        "sprite": null,
-        "baseStats": null,
-        "baseStatTotal": null,
+        "sprite": "assets/sprites/meowsticmmega.png",
+        "baseStats": {
+          "hp": 74,
+          "attack": 48,
+          "defense": 76,
+          "sp_attack": 143,
+          "sp_defense": 101,
+          "speed": 124
+        },
+        "baseStatTotal": 566,
         "usage": 0.1,
         "teammates": [
           {
@@ -37714,7 +37721,7 @@
         "checks": []
       },
       {
-        "name": "Florges Red Flower",
+        "name": "Florges",
         "types": [
           "Fairy"
         ],
@@ -38519,7 +38526,7 @@
             "pct": 16.6
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 16.1
           },
           {
@@ -39583,11 +39590,18 @@
       {
         "name": "Meowstic-F-Mega",
         "types": [
-          "Unknown"
+          "Psychic"
         ],
-        "sprite": null,
-        "baseStats": null,
-        "baseStatTotal": null,
+        "sprite": "assets/sprites/meowsticfmega.png",
+        "baseStats": {
+          "hp": 74,
+          "attack": 48,
+          "defense": 76,
+          "sp_attack": 143,
+          "sp_defense": 101,
+          "speed": 124
+        },
+        "baseStatTotal": 566,
         "usage": 0.1,
         "teammates": [
           {
@@ -46996,7 +47010,7 @@
             "pct": 13.3
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 11.2
           }
         ],
@@ -48317,7 +48331,7 @@
         "checks": []
       },
       {
-        "name": "Furfrou Natural Form",
+        "name": "Furfrou",
         "types": [
           "Normal"
         ],
@@ -48954,7 +48968,7 @@
             "pct": 23.1
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 19.8
           }
         ],
@@ -49442,7 +49456,7 @@
             "pct": 0
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 0
           }
         ]
@@ -49634,7 +49648,7 @@
             "pct": 25
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 20.2
           },
           {
@@ -49810,7 +49824,7 @@
             "pct": 34.3
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 26.7
           },
           {
@@ -49994,7 +50008,7 @@
             "pct": 22.2
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 20
           }
         ],
@@ -50350,7 +50364,7 @@
             "pct": 41.3
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 30.4
           },
           {
@@ -50496,20 +50510,20 @@
         ]
       },
       {
-        "name": "Floette-Eternal",
+        "name": "Floette-Eternal-Mega",
         "types": [
           "Fairy"
         ],
         "sprite": "assets/sprites/floettemega.png",
         "baseStats": {
-          "hp": 74,
-          "attack": 65,
-          "defense": 67,
-          "sp_attack": 125,
-          "sp_defense": 128,
-          "speed": 92
+          "hp": 149,
+          "attack": 105,
+          "defense": 107,
+          "sp_attack": 175,
+          "sp_defense": 168,
+          "speed": 122
         },
-        "baseStatTotal": 551,
+        "baseStatTotal": 826,
         "usage": 16.7,
         "teammates": [
           {
@@ -52642,7 +52656,7 @@
             "pct": 0
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 0
           }
         ]
@@ -52785,7 +52799,7 @@
             "pct": 0
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 0
           },
           {
@@ -53768,7 +53782,7 @@
             "pct": 0
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 0
           },
           {
@@ -54783,7 +54797,7 @@
             "pct": 0
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 0
           },
           {
@@ -54995,7 +55009,7 @@
             "pct": 21.7
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 17.4
           }
         ],
@@ -55319,7 +55333,7 @@
             "pct": 40.2
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 25.6
           },
           {
@@ -57369,7 +57383,7 @@
             "pct": 0
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 0
           },
           {
@@ -57889,7 +57903,7 @@
             "pct": 0
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 0
           }
         ]
@@ -58041,7 +58055,7 @@
             "pct": 0
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 0
           }
         ]
@@ -58205,7 +58219,7 @@
             "pct": 0
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 0
           },
           {
@@ -58693,7 +58707,7 @@
             "pct": 0
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 0
           },
           {
@@ -59335,7 +59349,7 @@
             "pct": 0
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 0
           }
         ]
@@ -60199,7 +60213,7 @@
             "pct": 0
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 0
           },
           {
@@ -60255,7 +60269,7 @@
             "pct": 23.8
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 23.5
           }
         ],
@@ -60723,7 +60737,7 @@
             "pct": 15.7
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 15.1
           }
         ],
@@ -63401,7 +63415,7 @@
             "pct": 35.2
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 27
           },
           {
@@ -63977,7 +63991,7 @@
         ],
         "checks": [
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 0
           },
           {
@@ -64033,7 +64047,7 @@
             "pct": 28.7
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 25.4
           },
           {
@@ -65228,7 +65242,7 @@
             "pct": 0
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 0
           },
           {
@@ -65376,7 +65390,7 @@
             "pct": 0
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 0
           },
           {
@@ -65548,7 +65562,7 @@
         ],
         "checks": [
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 0
           },
           {
@@ -66241,7 +66255,7 @@
             "pct": 0
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 0
           },
           {
@@ -67975,7 +67989,7 @@
             "pct": 24.1
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 20
           },
           {
@@ -68482,7 +68496,7 @@
             "pct": 26.7
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 18.2
           },
           {
@@ -69324,7 +69338,7 @@
             "pct": 41
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 37.4
           },
           {
@@ -70870,7 +70884,7 @@
             "pct": 15.9
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 15.3
           }
         ],
@@ -72477,7 +72491,7 @@
             "pct": 12.9
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 12
           }
         ],
@@ -74673,7 +74687,7 @@
             "pct": 53.3
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 46
           },
           {
@@ -74985,7 +74999,7 @@
             "pct": 16.2
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 15.1
           },
           {
@@ -77107,7 +77121,7 @@
             "pct": 49.4
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 44.7
           },
           {
@@ -81676,7 +81690,7 @@
             "pct": 24.6
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 24.5
           },
           {
@@ -84741,7 +84755,7 @@
             "pct": 53.5
           },
           {
-            "name": "Florges Red Flower",
+            "name": "Florges",
             "pct": 8.4
           }
         ],
@@ -85008,7 +85022,7 @@
         "checks": []
       },
       {
-        "name": "Florges Red Flower",
+        "name": "Florges",
         "types": [
           "Fairy"
         ],
@@ -85616,11 +85630,18 @@
       {
         "name": "Meowstic-F-Mega",
         "types": [
-          "Unknown"
+          "Psychic"
         ],
-        "sprite": null,
-        "baseStats": null,
-        "baseStatTotal": null,
+        "sprite": "assets/sprites/meowsticfmega.png",
+        "baseStats": {
+          "hp": 74,
+          "attack": 48,
+          "defense": 76,
+          "sp_attack": 143,
+          "sp_defense": 101,
+          "speed": 124
+        },
+        "baseStatTotal": 566,
         "usage": 0,
         "teammates": [
           {
@@ -88051,7 +88072,7 @@
             "pct": 31.1
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 29.1
           },
           {
@@ -89554,11 +89575,18 @@
       {
         "name": "Meowstic-M-Mega",
         "types": [
-          "Unknown"
+          "Psychic"
         ],
-        "sprite": null,
-        "baseStats": null,
-        "baseStatTotal": null,
+        "sprite": "assets/sprites/meowsticmmega.png",
+        "baseStats": {
+          "hp": 74,
+          "attack": 48,
+          "defense": 76,
+          "sp_attack": 143,
+          "sp_defense": 101,
+          "speed": 124
+        },
+        "baseStatTotal": 566,
         "usage": 0,
         "teammates": [
           {
@@ -90295,7 +90323,7 @@
             "pct": 18.4
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 18.4
           },
           {
@@ -91324,7 +91352,7 @@
             "pct": 27.6
           },
           {
-            "name": "Florges Red Flower",
+            "name": "Florges",
             "pct": 22.8
           },
           {
@@ -93161,7 +93189,7 @@
             "pct": 28.8
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 26.5
           }
         ],
@@ -93341,7 +93369,7 @@
             "pct": 27.8
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 23.5
           }
         ],
@@ -93797,7 +93825,7 @@
             "pct": 0
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 0
           },
           {
@@ -93841,7 +93869,7 @@
             "pct": 38.8
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 34.7
           },
           {
@@ -94025,7 +94053,7 @@
             "pct": 26.2
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 26
           }
         ],
@@ -94201,7 +94229,7 @@
             "pct": 28.2
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 24.6
           }
         ],
@@ -94343,20 +94371,20 @@
         ]
       },
       {
-        "name": "Floette-Eternal",
+        "name": "Floette-Eternal-Mega",
         "types": [
           "Fairy"
         ],
         "sprite": "assets/sprites/floettemega.png",
         "baseStats": {
-          "hp": 74,
-          "attack": 65,
-          "defense": 67,
-          "sp_attack": 125,
-          "sp_defense": 128,
-          "speed": 92
+          "hp": 149,
+          "attack": 105,
+          "defense": 107,
+          "sp_attack": 175,
+          "sp_defense": 168,
+          "speed": 122
         },
-        "baseStatTotal": 551,
+        "baseStatTotal": 826,
         "usage": 20.9,
         "teammates": [
           {
@@ -94528,7 +94556,7 @@
             "pct": 54.8
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 43
           },
           {
@@ -95247,7 +95275,7 @@
             "pct": 46
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 20.8
           }
         ],
@@ -96510,7 +96538,7 @@
             "pct": 0
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 0
           },
           {
@@ -96845,7 +96873,7 @@
             "pct": 0
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 0
           },
           {
@@ -97356,7 +97384,7 @@
             "pct": 0
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 0
           }
         ]
@@ -97671,7 +97699,7 @@
             "pct": 0
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 0
           },
           {
@@ -98811,7 +98839,7 @@
             "pct": 0
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 0
           },
           {
@@ -99383,7 +99411,7 @@
             "pct": 28.6
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 24.8
           }
         ],
@@ -100241,7 +100269,7 @@
             "pct": 45.5
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 30.2
           },
           {
@@ -101060,7 +101088,7 @@
             "pct": 0
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 0
           }
         ]
@@ -101220,7 +101248,7 @@
             "pct": 0
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 0
           },
           {
@@ -101880,7 +101908,7 @@
             "pct": 0
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 0
           },
           {
@@ -102044,7 +102072,7 @@
             "pct": 0
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 0
           }
         ]
@@ -102195,7 +102223,7 @@
             "pct": 0
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 0
           }
         ]
@@ -102351,7 +102379,7 @@
         ],
         "checks": [
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 0
           },
           {
@@ -102743,7 +102771,7 @@
             "pct": 23.7
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 22.2
           }
         ],
@@ -103231,7 +103259,7 @@
             "pct": 0
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 0
           },
           {
@@ -103410,7 +103438,7 @@
             "pct": 0
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 0
           },
           {
@@ -103458,7 +103486,7 @@
             "pct": 27.3
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 24.4
           }
         ],
@@ -103754,7 +103782,7 @@
             "pct": 55.2
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 41
           },
           {
@@ -104034,7 +104062,7 @@
             "pct": 0
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 0
           },
           {
@@ -104082,7 +104110,7 @@
             "pct": 42.5
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 35.8
           },
           {
@@ -104422,7 +104450,7 @@
             "pct": 29.6
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 23.7
           }
         ],
@@ -104922,7 +104950,7 @@
             "pct": 23.7
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 23.5
           },
           {
@@ -107529,7 +107557,7 @@
             "pct": 48.1
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 45.7
           },
           {
@@ -108954,7 +108982,7 @@
             "pct": 89
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 83
           },
           {
@@ -110929,7 +110957,7 @@
             "pct": 28.3
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 25.2
           }
         ],
@@ -111195,7 +111223,7 @@
             "pct": 79.4
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 78.2
           },
           {
@@ -111314,7 +111342,7 @@
         "usage": 0.1,
         "teammates": [
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 44.8
           },
           {
@@ -111472,7 +111500,7 @@
             "pct": 52.6
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 41.1
           },
           {
@@ -112015,7 +112043,7 @@
             "pct": 57.5
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 49.5
           },
           {
@@ -115523,7 +115551,7 @@
             "pct": 42.4
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 32.7
           },
           {
@@ -116679,7 +116707,7 @@
             "pct": 57.7
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 33.6
           },
           {
@@ -117282,7 +117310,7 @@
             "pct": 71.2
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 37.8
           },
           {
@@ -118381,7 +118409,7 @@
             "pct": 35.8
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 30.6
           },
           {
@@ -122192,7 +122220,7 @@
             "pct": 34.6
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 33.6
           },
           {
@@ -122354,7 +122382,7 @@
             "pct": 16.4
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 16.1
           }
         ],
@@ -124134,7 +124162,7 @@
             "pct": 82.2
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 81.7
           },
           {
@@ -127442,7 +127470,7 @@
             "pct": 33.5
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 30.1
           }
         ],
@@ -127622,7 +127650,7 @@
             "pct": 32.4
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 27.7
           }
         ],
@@ -127950,7 +127978,7 @@
             "pct": 39.8
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 34
           }
         ],
@@ -128078,7 +128106,7 @@
             "pct": 0
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 0
           },
           {
@@ -128122,7 +128150,7 @@
             "pct": 46.4
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 41.4
           },
           {
@@ -128306,7 +128334,7 @@
             "pct": 34.6
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 29.3
           }
         ],
@@ -128482,7 +128510,7 @@
             "pct": 31.5
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 26.7
           }
         ],
@@ -128624,20 +128652,20 @@
         ]
       },
       {
-        "name": "Floette-Eternal",
+        "name": "Floette-Eternal-Mega",
         "types": [
           "Fairy"
         ],
         "sprite": "assets/sprites/floettemega.png",
         "baseStats": {
-          "hp": 74,
-          "attack": 65,
-          "defense": 67,
-          "sp_attack": 125,
-          "sp_defense": 128,
-          "speed": 92
+          "hp": 149,
+          "attack": 105,
+          "defense": 107,
+          "sp_attack": 175,
+          "sp_defense": 168,
+          "speed": 122
         },
-        "baseStatTotal": 551,
+        "baseStatTotal": 826,
         "usage": 23.9,
         "teammates": [
           {
@@ -128809,7 +128837,7 @@
             "pct": 57.9
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 51.6
           },
           {
@@ -129296,7 +129324,7 @@
             "pct": 0
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 0
           },
           {
@@ -129524,7 +129552,7 @@
             "pct": 52.3
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 19.8
           }
         ],
@@ -130463,7 +130491,7 @@
             "pct": 0
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 0
           },
           {
@@ -130623,7 +130651,7 @@
             "pct": 0
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 0
           },
           {
@@ -132957,7 +132985,7 @@
             "pct": 27.2
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 24.8
           }
         ],
@@ -135964,7 +135992,7 @@
             "pct": 69.5
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 65.5
           },
           {
@@ -136826,7 +136854,7 @@
             "pct": 48.4
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 22.6
           }
         ],
@@ -137592,7 +137620,7 @@
             "pct": 34
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 33
           },
           {
@@ -137993,7 +138021,7 @@
             "pct": 50
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 31.1
           },
           {
@@ -140730,7 +140758,7 @@
             "pct": 58.3
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 32
           },
           {
@@ -141032,7 +141060,7 @@
             "pct": 92.3
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 92.1
           },
           {
@@ -141555,7 +141583,7 @@
             "pct": 95.6
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 84.5
           },
           {
@@ -142297,7 +142325,7 @@
             "pct": 30.4
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 30.4
           },
           {
@@ -142893,7 +142921,7 @@
             "pct": 66.7
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 60.6
           },
           {
@@ -143855,7 +143883,7 @@
             "pct": 61.1
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 54
           },
           {
@@ -144267,7 +144295,7 @@
             "pct": 37.2
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 26.6
           }
         ],
@@ -145726,7 +145754,7 @@
             "pct": 55.8
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 51.2
           },
           {
@@ -145861,7 +145889,7 @@
         "usage": 0.1,
         "teammates": [
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 39.2
           },
           {
@@ -148068,7 +148096,7 @@
             "pct": 31.2
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 27.3
           }
         ],
@@ -149448,7 +149476,7 @@
             "pct": 45.8
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 38.6
           },
           {
@@ -150840,7 +150868,7 @@
             "pct": 46.5
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 32.9
           },
           {
@@ -150999,7 +151027,7 @@
             "pct": 40.8
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 31.3
           },
           {
@@ -151407,7 +151435,7 @@
             "pct": 28.7
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 24.5
           },
           {
@@ -152263,7 +152291,7 @@
             "pct": 87.3
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 87.2
           },
           {
@@ -152410,7 +152438,7 @@
             "pct": 75.7
           },
           {
-            "name": "Floette-Eternal",
+            "name": "Floette-Eternal-Mega",
             "pct": 28.5
           },
           {

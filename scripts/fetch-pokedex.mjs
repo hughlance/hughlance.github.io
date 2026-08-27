@@ -369,50 +369,73 @@ async function buildFlattenedRecord(row, showdownId) {
   };
 }
 
+// championsbattledata occasionally has a data-quality slip where a row
+// for a completely unrelated species shows up under another species'
+// base_name metadata (confirmed: a "Mega Gallade" row appears under
+// Meowstic's metadata). Skip anything whose saved_name doesn't
+// plausibly belong to the base species it's filed under.
+function rowBelongsToBaseSpecies(row) {
+  const base = toId(row.base_name);
+  const savedId = toId(row.saved_name || "");
+  return savedId.includes(base);
+}
+
 async function flattenFormsFromMetadata(pokedex, baseNames) {
   console.log(`Fetching per-species metadata for ${baseNames.size} base species (full form list, real stats/sprites)…`);
-  let done = 0, formsAdded = 0, formsUpgraded = 0;
+  let done = 0, formsAdded = 0, formsUpgraded = 0, formsSkipped = 0;
+  // Species that have needed repeated fixes — print the RAW row data
+  // for these so any remaining mismatch can be diagnosed from real
+  // output instead of guessing at championsbattledata's exact format.
+  const DEBUG_WATCHLIST = new Set(["gourgeist", "floette", "meowstic", "pumpkaboo"]);
   for (const baseName of baseNames) {
     const rows = await fetchMetadataRows(baseName);
     done++;
     if (done % 25 === 0) console.log(`  metadata ${done}/${baseNames.size}…`);
     if (!rows || !rows.length) continue;
 
+    if (DEBUG_WATCHLIST.has(toId(baseName))) {
+      console.log(`  [DEBUG] raw rows for base_name="${baseName}":`);
+      console.log(JSON.stringify(rows, null, 2));
+    }
+
     for (const row of rows) {
+      if (!rowBelongsToBaseSpecies(row)) {
+        formsSkipped++;
+        continue;
+      }
       const showdownId = deriveShowdownId(row);
       if (!showdownId) continue;
       const existing = pokedex[showdownId];
+
+      if (DEBUG_WATCHLIST.has(toId(row.base_name))) {
+        console.log(`  [DEBUG] "${row.saved_name}" -> showdownId="${showdownId}", displayName="${deriveDisplayName(row)}", pokeApiSlug="${derivePokeApiSlug(row)}", existing=${!!existing}`);
+      }
 
       // Already has real battle-usage data (from the bulk index) — keep
       // it, but still top up anything it's missing from this row.
       if (existing) {
         const needsSprite = !existing.sprite;
-        let baseStats = existing.baseStats;
-        let baseStatTotal = existing.baseStatTotal;
-        let pokeApiRetry = null;
+
+        // Always prefer PokeAPI via OUR row-derived slug over whatever
+        // buildRecord's original entry.slug attempt got — that original
+        // attempt can succeed-but-be-wrong (a slug that resolves to
+        // SOME PokeAPI entry, just not necessarily the right one), not
+        // just fail outright, so "only retry if null" wasn't reliable
+        // enough on its own (this was the actual cause of Aegislash
+        // showing Champions' own stat numbers instead of PokeAPI's).
+        let pokeApiRetry = await fetchBaseStats(derivePokeApiSlug(row));
+        let baseStats = pokeApiRetry.baseStats || existing.baseStats;
+        let baseStatTotal = pokeApiRetry.baseStats ? pokeApiRetry.baseStatTotal : existing.baseStatTotal;
         if (!baseStats) {
-          // The original PokeAPI attempt (using championsbattledata's
-          // own entry.slug) came back empty — that slug is sometimes
-          // malformed. Retry PokeAPI with our own row-derived slug
-          // (handles any suffix, not just Mega/regional) before giving
-          // up and using Champions' own (less reliable) numbers.
-          pokeApiRetry = await fetchBaseStats(derivePokeApiSlug(row));
-          baseStats = pokeApiRetry.baseStats;
-          baseStatTotal = pokeApiRetry.baseStatTotal;
-          if (!baseStats) {
-            const fromRow = statsFromMetadataRow(row);
-            baseStats = fromRow.baseStats;
-            baseStatTotal = fromRow.baseStatTotal;
-          }
+          // PokeAPI has nothing for this at all (fictional/game-exclusive
+          // form) — Champions' own numbers are better than nothing.
+          const fromRow = statsFromMetadataRow(row);
+          baseStats = fromRow.baseStats;
+          baseStatTotal = fromRow.baseStatTotal;
         }
 
-        let types = existing.types?.length ? existing.types : (row.types || "").split("/").map(t => t.trim()).filter(Boolean);
-        if (!types.length) {
-          // Champions' own type field is blank for some of their own
-          // fictional additions (e.g. Mega Meowstic) — try PokeAPI too.
-          if (!pokeApiRetry) pokeApiRetry = await fetchBaseStats(derivePokeApiSlug(row));
-          if (pokeApiRetry.types?.length) types = pokeApiRetry.types;
-        }
+        let types = pokeApiRetry.types?.length ? pokeApiRetry.types
+          : (existing.types?.length ? existing.types : (row.types || "").split("/").map(t => t.trim()).filter(Boolean));
 
         pokedex[showdownId] = {
           ...existing,
@@ -433,7 +456,7 @@ async function flattenFormsFromMetadata(pokedex, baseNames) {
       formsAdded++;
     }
   }
-  console.log(`  Flattened ${formsAdded} new forms, upgraded ${formsUpgraded} existing entries with missing data.`);
+  console.log(`  Flattened ${formsAdded} new forms, upgraded ${formsUpgraded} existing entries with missing data, skipped ${formsSkipped} mismatched rows.`);
 }
 
 async function run() {
