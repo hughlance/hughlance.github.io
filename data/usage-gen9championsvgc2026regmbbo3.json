@@ -1766,14 +1766,14 @@
         ],
         "sprite": "assets/sprites/floettemega.png",
         "baseStats": {
-          "hp": 149,
-          "attack": 105,
-          "defense": 107,
-          "sp_attack": 175,
-          "sp_defense": 168,
-          "speed": 122
+          "hp": 74,
+          "attack": 85,
+          "defense": 87,
+          "sp_attack": 155,
+          "sp_defense": 148,
+          "speed": 102
         },
-        "baseStatTotal": 826,
+        "baseStatTotal": 651,
         "usage": 14,
         "teammates": [
           {
@@ -4709,7 +4709,7 @@
             "pct": 0
           },
           {
-            "name": "Palafin Zero Form",
+            "name": "Palafin",
             "pct": 0
           },
           {
@@ -7255,7 +7255,7 @@
             "pct": 0
           },
           {
-            "name": "Palafin Zero Form",
+            "name": "Palafin",
             "pct": 0
           }
         ]
@@ -11581,7 +11581,7 @@
         ]
       },
       {
-        "name": "Palafin Zero Form",
+        "name": "Palafin",
         "types": [
           "Water"
         ],
@@ -32542,7 +32542,7 @@
             "pct": 16
           },
           {
-            "name": "Palafin Zero Form",
+            "name": "Palafin",
             "pct": 14.5
           }
         ],
@@ -43792,7 +43792,7 @@
         "checks": []
       },
       {
-        "name": "Gourgeist Jumbo Variety",
+        "name": "Gourgeist-Super",
         "types": [
           "Ghost",
           "Grass"
@@ -44290,7 +44290,7 @@
             "pct": 10.9
           },
           {
-            "name": "Palafin Zero Form",
+            "name": "Palafin",
             "pct": 9.4
           }
         ],
@@ -50516,14 +50516,14 @@
         ],
         "sprite": "assets/sprites/floettemega.png",
         "baseStats": {
-          "hp": 149,
-          "attack": 105,
-          "defense": 107,
-          "sp_attack": 175,
-          "sp_defense": 168,
-          "speed": 122
+          "hp": 74,
+          "attack": 85,
+          "defense": 87,
+          "sp_attack": 155,
+          "sp_defense": 148,
+          "speed": 102
         },
-        "baseStatTotal": 826,
+        "baseStatTotal": 651,
         "usage": 16.7,
         "teammates": [
           {
@@ -60707,7 +60707,7 @@
         ]
       },
       {
-        "name": "Palafin Zero Form",
+        "name": "Palafin",
         "types": [
           "Water"
         ],
@@ -66131,7 +66131,7 @@
             "pct": 32.2
           },
           {
-            "name": "Palafin Zero Form",
+            "name": "Palafin",
             "pct": 27.2
           },
           {
@@ -89699,7 +89699,7 @@
         "checks": []
       },
       {
-        "name": "Gourgeist Jumbo Variety",
+        "name": "Gourgeist-Super",
         "types": [
           "Ghost",
           "Grass"
@@ -94377,14 +94377,14 @@
         ],
         "sprite": "assets/sprites/floettemega.png",
         "baseStats": {
-          "hp": 149,
-          "attack": 105,
-          "defense": 107,
-          "sp_attack": 175,
-          "sp_defense": 168,
-          "speed": 122
+          "hp": 74,
+          "attack": 85,
+          "defense": 87,
+          "sp_attack": 155,
+          "sp_defense": 148,
+          "speed": 102
         },
-        "baseStatTotal": 826,
+        "baseStatTotal": 651,
         "usage": 20.9,
         "teammates": [
           {
@@ -104420,7 +104420,7 @@
         ]
       },
       {
-        "name": "Palafin Zero Form",
+        "name": "Palafin",
         "types": [
           "Water"
         ],
@@ -107393,7 +107393,7 @@
             "pct": 68.4
           },
           {
-            "name": "Palafin Zero Form",
+            "name": "Palafin",
             "pct": 63.4
           },
           {
@@ -128658,14 +128658,14 @@
         ],
         "sprite": "assets/sprites/floettemega.png",
         "baseStats": {
-          "hp": 149,
-          "attack": 105,
-          "defense": 107,
-          "sp_attack": 175,
-          "sp_defense": 168,
-          "speed": 122
+          "hp": 74,
+          "attack": 85,
+          "defense": 87,
+          "sp_attack": 155,
+          "sp_defense": 148,
+          "speed": 102
         },
-        "baseStatTotal": 826,
+        "baseStatTotal": 651,
         "usage": 23.9,
         "teammates": [
           {
@@ -140740,7 +140740,7 @@
         "checks": []
       },
       {
-        "name": "Palafin Zero Form",
+        "name": "Palafin",
         "types": [
           "Water"
         ],
@@ -149183,7 +149183,7 @@
             "pct": 55.8
           },
           {
-            "name": "Palafin Zero Form",
+            "name": "Palafin",
             "pct": 40.7
           },
           {

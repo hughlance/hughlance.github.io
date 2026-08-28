@@ -3139,14 +3139,14 @@
         ],
         "sprite": "assets/sprites/floettemega.png",
         "baseStats": {
-          "hp": 149,
-          "attack": 105,
-          "defense": 107,
-          "sp_attack": 175,
-          "sp_defense": 168,
-          "speed": 122
+          "hp": 74,
+          "attack": 85,
+          "defense": 87,
+          "sp_attack": 155,
+          "sp_defense": 148,
+          "speed": 102
         },
-        "baseStatTotal": 826,
+        "baseStatTotal": 651,
         "usage": 8.1,
         "teammates": [
           {
@@ -14225,7 +14225,7 @@
         ]
       },
       {
-        "name": "Palafin Zero Form",
+        "name": "Palafin",
         "types": [
           "Water"
         ],
@@ -18097,7 +18097,7 @@
             "pct": 21.3
           },
           {
-            "name": "Palafin Zero Form",
+            "name": "Palafin",
             "pct": 11.3
           },
           {
@@ -22807,7 +22807,7 @@
             "pct": 0
           },
           {
-            "name": "Palafin Zero Form",
+            "name": "Palafin",
             "pct": 0
           }
         ]
@@ -26917,7 +26917,7 @@
         ],
         "checks": [
           {
-            "name": "Palafin Zero Form",
+            "name": "Palafin",
             "pct": 0
           },
           {
@@ -32900,7 +32900,7 @@
             "pct": 30.8
           },
           {
-            "name": "Palafin Zero Form",
+            "name": "Palafin",
             "pct": 29.9
           },
           {
@@ -33020,7 +33020,7 @@
             "pct": 0
           },
           {
-            "name": "Palafin Zero Form",
+            "name": "Palafin",
             "pct": 0
           },
           {
@@ -41864,7 +41864,7 @@
         ]
       },
       {
-        "name": "Gourgeist Jumbo Variety",
+        "name": "Gourgeist-Super",
         "types": [
           "Ghost",
           "Grass"
@@ -55108,14 +55108,14 @@
         ],
         "sprite": "assets/sprites/floettemega.png",
         "baseStats": {
-          "hp": 149,
-          "attack": 105,
-          "defense": 107,
-          "sp_attack": 175,
-          "sp_defense": 168,
-          "speed": 122
+          "hp": 74,
+          "attack": 85,
+          "defense": 87,
+          "sp_attack": 155,
+          "sp_defense": 148,
+          "speed": 102
         },
-        "baseStatTotal": 826,
+        "baseStatTotal": 651,
         "usage": 9.3,
         "teammates": [
           {
@@ -67873,7 +67873,7 @@
         ]
       },
       {
-        "name": "Palafin Zero Form",
+        "name": "Palafin",
         "types": [
           "Water"
         ],
@@ -71735,7 +71735,7 @@
             "pct": 27.1
           },
           {
-            "name": "Palafin Zero Form",
+            "name": "Palafin",
             "pct": 17.7
           },
           {
@@ -83152,7 +83152,7 @@
             "pct": 38.2
           },
           {
-            "name": "Palafin Zero Form",
+            "name": "Palafin",
             "pct": 38
           },
           {
@@ -93823,7 +93823,7 @@
         ]
       },
       {
-        "name": "Gourgeist Jumbo Variety",
+        "name": "Gourgeist-Super",
         "types": [
           "Ghost",
           "Grass"
@@ -100044,7 +100044,7 @@
             "pct": 18.5
           },
           {
-            "name": "Gourgeist Jumbo Variety",
+            "name": "Gourgeist-Super",
             "pct": 18.3
           },
           {
@@ -105332,14 +105332,14 @@
         ],
         "sprite": "assets/sprites/floettemega.png",
         "baseStats": {
-          "hp": 149,
-          "attack": 105,
-          "defense": 107,
-          "sp_attack": 175,
-          "sp_defense": 168,
-          "speed": 122
+          "hp": 74,
+          "attack": 85,
+          "defense": 87,
+          "sp_attack": 155,
+          "sp_defense": 148,
+          "speed": 102
         },
-        "baseStatTotal": 826,
+        "baseStatTotal": 651,
         "usage": 12.1,
         "teammates": [
           {
@@ -118728,7 +118728,7 @@
         ]
       },
       {
-        "name": "Palafin Zero Form",
+        "name": "Palafin",
         "types": [
           "Water"
         ],
@@ -125422,7 +125422,7 @@
             "pct": 31.1
           },
           {
-            "name": "Palafin Zero Form",
+            "name": "Palafin",
             "pct": 21
           },
           {
@@ -131548,7 +131548,7 @@
             "pct": 32.3
           },
           {
-            "name": "Palafin Zero Form",
+            "name": "Palafin",
             "pct": 32.1
           }
         ],
@@ -139917,7 +139917,7 @@
             "pct": 14.1
           },
           {
-            "name": "Palafin Zero Form",
+            "name": "Palafin",
             "pct": 12.8
           }
         ],
@@ -141838,7 +141838,7 @@
         "checks": []
       },
       {
-        "name": "Gourgeist Jumbo Variety",
+        "name": "Gourgeist-Super",
         "types": [
           "Ghost",
           "Grass"
@@ -148647,14 +148647,14 @@
         ],
         "sprite": "assets/sprites/floettemega.png",
         "baseStats": {
-          "hp": 149,
-          "attack": 105,
-          "defense": 107,
-          "sp_attack": 175,
-          "sp_defense": 168,
-          "speed": 122
+          "hp": 74,
+          "attack": 85,
+          "defense": 87,
+          "sp_attack": 155,
+          "sp_defense": 148,
+          "speed": 102
         },
-        "baseStatTotal": 826,
+        "baseStatTotal": 651,
         "usage": 15,
         "teammates": [
           {
@@ -161413,7 +161413,7 @@
         "checks": []
       },
       {
-        "name": "Palafin Zero Form",
+        "name": "Palafin",
         "types": [
           "Water"
         ],
@@ -167103,7 +167103,7 @@
             "pct": 18.2
           },
           {
-            "name": "Palafin Zero Form",
+            "name": "Palafin",
             "pct": 16.3
           }
         ],
@@ -175141,7 +175141,7 @@
             "pct": 34.2
           },
           {
-            "name": "Palafin Zero Form",
+            "name": "Palafin",
             "pct": 33.5
           },
           {
@@ -184349,7 +184349,7 @@
         "checks": []
       },
       {
-        "name": "Gourgeist Jumbo Variety",
+        "name": "Gourgeist-Super",
         "types": [
           "Ghost",
           "Grass"

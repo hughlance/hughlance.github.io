@@ -58,6 +58,8 @@ export const SPECIAL_FORM_RULES = [
   // pattern, but keeps the plain "Vivillon" display/export name.
   { test: /^vivillon$/,
     asset: () => "Vivillon Fancy Pattern", display: () => "Vivillon", slug: () => "vivillon" },
+  { test: /^vivillonfancy$/,
+    asset: () => "Vivillon Fancy Pattern", display: () => "Vivillon", slug: () => "vivillon" },
   { test: /^vivillon-?(.+)$/,
     asset: (m) => `Vivillon ${titleCase(m[1])} Pattern`, display: (m) => `Vivillon-${titleCase(m[1])}`, slug: (m) => `vivillon-${m[1]}` },
 
@@ -87,6 +89,8 @@ export const SPECIAL_FORM_RULES = [
   // Gourgeist: four sizes; Average is Showdown's default/base ID.
   { test: /^gourgeist-?(small|large|super)$/,
     asset: (m) => `Gourgeist ${titleCase(m[1])}`, display: (m) => `Gourgeist-${titleCase(m[1])}`, slug: (m) => `gourgeist-${m[1]}` },
+  { test: /^gourgeistjumbo(variety)?$/,
+    asset: () => "Gourgeist Super", display: () => "Gourgeist-Super", slug: () => "gourgeist-super" },
 
   // Meowstic: male (default, no suffix) and female are separate species
   // as far as sprites/stats go for the REGULAR forms — must never share
@@ -200,6 +204,9 @@ export function deriveShowdownId(row) {
   const override = SAVED_NAME_OVERRIDES[row.saved_name];
   if (override) return override.smogonId;
 
+  const special = matchSpecialForm(toId(row.saved_name || ""));
+  if (special) return toId(special.displayName);
+
   const base = toId(row.base_name);
   if (COSMETIC_ONLY_BASE_SPECIES.has(base)) return base;
   let s = (row.saved_name || "").trim();
@@ -225,7 +232,7 @@ export function deriveShowdownId(row) {
     if (!suffix) return base; // exactly the species name = default form
     if (/^female$/i.test(suffix)) return base + "f";
     if (/^(male|shield)$/i.test(suffix)) return base; // unsuffixed defaults
-    if (/^average$/i.test(suffix)) return base;
+    if (/^(average|medium)$/i.test(suffix)) return base;
     return base + toId(suffix);
   }
   return toId(s);
@@ -242,6 +249,9 @@ export function deriveDisplayName(row) {
 
   const override = SAVED_NAME_OVERRIDES[row.saved_name];
   if (override) return override.displayName;
+
+  const special = matchSpecialForm(toId(row.saved_name || ""));
+  if (special) return special.displayName;
 
   const base = titleCase(toId(row.base_name));
   if (COSMETIC_ONLY_BASE_SPECIES.has(toId(row.base_name))) return base;
@@ -265,7 +275,7 @@ export function deriveDisplayName(row) {
     if (!suffix) return base;
     if (/^female$/i.test(suffix)) return `${base}-F`;
     if (/^(male|shield)$/i.test(suffix)) return base;
-    if (/^average$/i.test(suffix)) return base;
+    if (/^(average|medium)$/i.test(suffix)) return base;
     return `${base}-${titleCase(suffix)}`;
   }
   return titleCase(s);
@@ -298,12 +308,23 @@ function rowPokeApiSlugOverride(row) {
     // Only exists as Eternal Flower in this game — always the real
     // "floette-eternal" PokeAPI slug, never bare "floette" (which would
     // silently give the wrong, mainline-default Floette's stats).
-    // Mega Floette has no PokeAPI entry at all — "NONE" tells the
-    // caller to stop here rather than fall through to generic pattern
-    // matching, which would otherwise guess a wrong slug like
-    // "floette-mega" (null alone isn't enough to signal that, since
-    // this function also returns null for "not one of my species").
-    return /mega/i.test(row.saved_name || "") ? "NONE" : "floette-eternal";
+    // Mega Floette uses the "floette-mega" PokeAPI slug.
+    return /mega/i.test(row.saved_name || "") ? "floette-mega" : "floette-eternal";
+  }
+  if (base === "gourgeist") {
+    // Explicit, hardcoded — bypasses the generic suffix chain entirely
+    // for this species, since something in that chain kept producing
+    // wrong results here even when tested output looked correct.
+    const s = (row.saved_name || "").toLowerCase();
+    if (/small/.test(s)) return "gourgeist-small";
+    if (/average/.test(s)) return "gourgeist-average";
+    if (/large/.test(s)) return "gourgeist-large";
+    if (/super/.test(s)) return "gourgeist-super";
+    // "Jumbo" (and any other size this game invents beyond the four
+    // real mainline sizes) has no PokeAPI entry — "NONE" stops here
+    // rather than guessing a slug that will 404, falling back cleanly
+    // to Champions' own numbers, the best source available for it.
+    return "NONE";
   }
   return null;
 }
@@ -311,6 +332,8 @@ function rowPokeApiSlugOverride(row) {
 export function derivePokeApiSlug(row) {
   const override = SAVED_NAME_OVERRIDES[row.saved_name];
   if (override?.pokeApiSlug) return override.pokeApiSlug;
+  const special = matchSpecialForm(toId(row.saved_name || ""));
+  if (special) return special.pokeApiSlug;
   const rowOverride = rowPokeApiSlugOverride(row);
   if (rowOverride === "NONE") return null; // explicitly no PokeAPI stats exist — caller falls back to Champions' own numbers
   if (rowOverride) return rowOverride;
@@ -339,7 +362,7 @@ export function derivePokeApiSlug(row) {
     // (Gourgeist/Pumpkaboo show as bare "Gourgeist" in the name/export),
     // but PokeAPI has no bare entry for these — it requires the explicit
     // "-average" suffix. Confirmed: slug is gourgeist-average.
-    if (/^average$/i.test(suffix)) return `${base}-average`;
+    if (/^(average|medium)$/i.test(suffix)) return `${base}-average`;
     return `${base}-${toId(suffix)}`;
   }
   return base;

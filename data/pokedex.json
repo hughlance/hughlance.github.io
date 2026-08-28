@@ -30537,9 +30537,9 @@
       },
       "sprite": "assets/sprites/flareon.png"
     },
-    "floette": {
-      "name": "Floette",
-      "showdownId": "floette",
+    "floetteeternal": {
+      "name": "Floette-Eternal",
+      "showdownId": "floetteeternal",
       "showdownName": "Floette",
       "slug": "floette",
       "types": [
@@ -30564,137 +30564,141 @@
         "moves": [
           {
             "name": "Protect",
-            "pct": 97.3
+            "topPercentage": 97.3
           },
           {
-            "name": "Dazzling Gleam",
-            "pct": 95.4
+            "name": "Dazzling Gleam"
           },
           {
-            "name": "Moonblast",
-            "pct": 66.7
+            "name": "Moonblast"
           },
           {
-            "name": "Light of Ruin",
-            "pct": 50.2
+            "name": "Light of Ruin"
           },
           {
-            "name": "Calm Mind",
-            "pct": 46.9
+            "name": "Calm Mind"
           },
           {
-            "name": "Draining Kiss",
-            "pct": 29.9
+            "name": "Draining Kiss"
           },
           {
-            "name": "Psychic",
-            "pct": 4.2
+            "name": "Psychic"
           },
           {
-            "name": "Helping Hand",
-            "pct": 3
+            "name": "Helping Hand"
           },
           {
-            "name": "Giga Drain",
-            "pct": 1.7
+            "name": "Giga Drain"
           },
           {
-            "name": "Energy Ball",
-            "pct": 1.1
+            "name": "Energy Ball"
           }
         ],
         "items": [
           {
             "name": "Floettite",
-            "pct": 98.9
+            "topPercentage": 98.9
           },
           {
-            "name": "Choice Scarf",
-            "pct": 0.5
+            "name": "Choice Scarf"
           },
           {
-            "name": "Fairy Feather",
-            "pct": 0.2
+            "name": "Fairy Feather"
           },
           {
-            "name": "Life Orb",
-            "pct": 0
+            "name": "Life Orb"
           },
           {
-            "name": "Leftovers",
-            "pct": 0
+            "name": "Leftovers"
           },
           {
-            "name": "Wise Glasses",
-            "pct": 0
+            "name": "Wise Glasses"
           },
           {
-            "name": "Sitrus Berry",
-            "pct": 0
+            "name": "Sitrus Berry"
           },
           {
-            "name": "Kebia Berry",
-            "pct": 0
+            "name": "Kebia Berry"
           },
           {
-            "name": "Delphoxite",
-            "pct": 0
+            "name": "Delphoxite"
           },
           {
-            "name": "Babiri Berry",
-            "pct": 0
+            "name": "Babiri Berry"
           }
         ],
         "abilities": [
           {
             "name": "Flower Veil",
-            "pct": 98.9
+            "topPercentage": 98.9
           },
           {
-            "name": "Symbiosis",
-            "pct": 1.1
+            "name": "Symbiosis"
+          }
+        ],
+        "teammates": [
+          {
+            "name": "Garchomp"
+          },
+          {
+            "name": "Kingambit"
+          },
+          {
+            "name": "Basculegion Male"
+          },
+          {
+            "name": "Whimsicott"
+          },
+          {
+            "name": "Charizard"
+          },
+          {
+            "name": "Incineroar"
+          },
+          {
+            "name": "Sinistcha"
+          },
+          {
+            "name": "Sneasler"
+          },
+          {
+            "name": "Delphox"
+          },
+          {
+            "name": "Farigiraf"
           }
         ],
         "natures": [
           {
             "name": "Modest",
-            "pct": 56.7
+            "topPercentage": 56.7
           },
           {
-            "name": "Timid",
-            "pct": 40.7
+            "name": "Timid"
           },
           {
-            "name": "Bold",
-            "pct": 1.9
+            "name": "Bold"
           },
           {
-            "name": "Quiet",
-            "pct": 0.5
+            "name": "Quiet"
           },
           {
-            "name": "Calm",
-            "pct": 0
+            "name": "Calm"
           },
           {
-            "name": "Brave",
-            "pct": 0
+            "name": "Brave"
           },
           {
-            "name": "Jolly",
-            "pct": 0
+            "name": "Jolly"
           },
           {
-            "name": "Relaxed",
-            "pct": 0
+            "name": "Relaxed"
           },
           {
-            "name": "Mild",
-            "pct": 0
+            "name": "Mild"
           },
           {
-            "name": "Adamant",
-            "pct": 0
+            "name": "Adamant"
           }
         ],
         "evSpreads": [
@@ -30728,48 +30732,6 @@
           {
             "name": "HP 28 / Atk 0 / Def 20 / SpA 7 / SpD 0 / Spe 11"
           }
-        ],
-        "teammates": [
-          {
-            "name": "Garchomp",
-            "pct": 0
-          },
-          {
-            "name": "Kingambit",
-            "pct": 0
-          },
-          {
-            "name": "Basculegion Male",
-            "pct": 0
-          },
-          {
-            "name": "Whimsicott",
-            "pct": 0
-          },
-          {
-            "name": "Charizard",
-            "pct": 0
-          },
-          {
-            "name": "Incineroar",
-            "pct": 0
-          },
-          {
-            "name": "Sinistcha",
-            "pct": 0
-          },
-          {
-            "name": "Sneasler",
-            "pct": 0
-          },
-          {
-            "name": "Delphox",
-            "pct": 0
-          },
-          {
-            "name": "Farigiraf",
-            "pct": 0
-          }
         ]
       },
       "singles": {
@@ -30777,137 +30739,141 @@
         "moves": [
           {
             "name": "Calm Mind",
-            "pct": 93.1
+            "topPercentage": 93.1
           },
           {
-            "name": "Moonblast",
-            "pct": 92.2
+            "name": "Moonblast"
           },
           {
-            "name": "Draining Kiss",
-            "pct": 50.5
+            "name": "Draining Kiss"
           },
           {
-            "name": "Synthesis",
-            "pct": 49.3
+            "name": "Synthesis"
           },
           {
-            "name": "Light of Ruin",
-            "pct": 38
+            "name": "Light of Ruin"
           },
           {
-            "name": "Charm",
-            "pct": 35
+            "name": "Charm"
           },
           {
-            "name": "Psychic",
-            "pct": 21.3
+            "name": "Psychic"
           },
           {
-            "name": "Substitute",
-            "pct": 7.5
+            "name": "Substitute"
           },
           {
-            "name": "Giga Drain",
-            "pct": 2.1
+            "name": "Giga Drain"
           },
           {
-            "name": "Misty Terrain",
-            "pct": 1.7
+            "name": "Misty Terrain"
           }
         ],
         "items": [
           {
             "name": "Floettite",
-            "pct": 97.7
+            "topPercentage": 97.7
           },
           {
-            "name": "Choice Scarf",
-            "pct": 1.9
+            "name": "Choice Scarf"
           },
           {
-            "name": "Focus Sash",
-            "pct": 0.1
+            "name": "Focus Sash"
           },
           {
-            "name": "Fairy Feather",
-            "pct": 0
+            "name": "Fairy Feather"
           },
           {
-            "name": "Sitrus Berry",
-            "pct": 0
+            "name": "Sitrus Berry"
           },
           {
-            "name": "Leftovers",
-            "pct": 0
+            "name": "Leftovers"
           },
           {
-            "name": "Life Orb",
-            "pct": 0
+            "name": "Life Orb"
           },
           {
-            "name": "Charizardite Y",
-            "pct": 0
+            "name": "Charizardite Y"
           },
           {
-            "name": "Big Root",
-            "pct": 0
+            "name": "Big Root"
           },
           {
-            "name": "Delphoxite",
-            "pct": 0
+            "name": "Delphoxite"
           }
         ],
         "abilities": [
           {
             "name": "Flower Veil",
-            "pct": 97.7
+            "topPercentage": 97.7
           },
           {
-            "name": "Symbiosis",
-            "pct": 2.3
+            "name": "Symbiosis"
+          }
+        ],
+        "teammates": [
+          {
+            "name": "Garchomp"
+          },
+          {
+            "name": "Delphox"
+          },
+          {
+            "name": "Corviknight"
+          },
+          {
+            "name": "Meowscarada"
+          },
+          {
+            "name": "Hisuian Samurott"
+          },
+          {
+            "name": "Archaludon"
+          },
+          {
+            "name": "Toxapex"
+          },
+          {
+            "name": "Scizor"
+          },
+          {
+            "name": "Hippowdon"
+          },
+          {
+            "name": "Basculegion Male"
           }
         ],
         "natures": [
           {
             "name": "Timid",
-            "pct": 72.4
+            "topPercentage": 72.4
           },
           {
-            "name": "Modest",
-            "pct": 24
+            "name": "Modest"
           },
           {
-            "name": "Bold",
-            "pct": 2.9
+            "name": "Bold"
           },
           {
-            "name": "Calm",
-            "pct": 0.5
+            "name": "Calm"
           },
           {
-            "name": "Jolly",
-            "pct": 0
+            "name": "Jolly"
           },
           {
-            "name": "Quiet",
-            "pct": 0
+            "name": "Quiet"
           },
           {
-            "name": "Naive",
-            "pct": 0
+            "name": "Naive"
           },
           {
-            "name": "Impish",
-            "pct": 0
+            "name": "Impish"
           },
           {
-            "name": "Relaxed",
-            "pct": 0
+            "name": "Relaxed"
           },
           {
-            "name": "Hasty",
-            "pct": 0
+            "name": "Hasty"
           }
         ],
         "evSpreads": [
@@ -30941,51 +30907,9 @@
           {
             "name": "HP 22 / Atk 0 / Def 0 / SpA 12 / SpD 0 / Spe 32"
           }
-        ],
-        "teammates": [
-          {
-            "name": "Garchomp",
-            "pct": 0
-          },
-          {
-            "name": "Delphox",
-            "pct": 0
-          },
-          {
-            "name": "Corviknight",
-            "pct": 0
-          },
-          {
-            "name": "Meowscarada",
-            "pct": 0
-          },
-          {
-            "name": "Hisuian Samurott",
-            "pct": 0
-          },
-          {
-            "name": "Archaludon",
-            "pct": 0
-          },
-          {
-            "name": "Toxapex",
-            "pct": 0
-          },
-          {
-            "name": "Scizor",
-            "pct": 0
-          },
-          {
-            "name": "Hippowdon",
-            "pct": 0
-          },
-          {
-            "name": "Basculegion Male",
-            "pct": 0
-          }
         ]
       },
-      "sprite": "assets/sprites/floette.png"
+      "sprite": "assets/sprites/floetteeternal.png"
     },
     "florges": {
       "name": "Florges",
@@ -40403,7 +40327,7 @@
       "sprite": "assets/sprites/gourgeist.png"
     },
     "gourgeistsuper": {
-      "name": "Gourgeist Jumbo Variety",
+      "name": "Gourgeist-Super",
       "showdownId": "gourgeistsuper",
       "showdownName": "Gourgeist-Super",
       "slug": "gourgeist-jumbo-variety",
@@ -59740,7 +59664,7 @@
       "sprite": "assets/sprites/manectric.png"
     },
     "mausholdfour": {
-      "name": "Maushold Family of Four",
+      "name": "Mausholdfour",
       "showdownId": "mausholdfour",
       "showdownName": "Maushold-Four",
       "slug": "maushold-family-of-four",
@@ -68528,7 +68452,7 @@
       "sprite": "assets/sprites/overqwil.png"
     },
     "palafin": {
-      "name": "Palafin Zero Form",
+      "name": "Palafin",
       "showdownId": "palafin",
       "showdownName": "Palafin",
       "slug": "palafin-zero-form",
@@ -102035,9 +101959,9 @@
       },
       "sprite": "assets/sprites/vileplume.png"
     },
-    "vivillonfancy": {
-      "name": "Vivillon Fancy Pattern",
-      "showdownId": "vivillonfancy",
+    "vivillon": {
+      "name": "Vivillon",
+      "showdownId": "vivillon",
       "showdownName": "Vivillon-Fancy",
       "slug": "vivillon-fancy-pattern",
       "types": [
@@ -102050,8 +101974,15 @@
         "Friend Guard"
       ],
       "hiddenAbility": null,
-      "baseStats": null,
-      "baseStatTotal": null,
+      "baseStats": {
+        "hp": 80,
+        "attack": 52,
+        "defense": 50,
+        "sp_attack": 90,
+        "sp_defense": 50,
+        "speed": 89
+      },
+      "baseStatTotal": 411,
       "doubles": {
         "rank": 51,
         "moves": [
@@ -102486,7 +102417,7 @@
           }
         ]
       },
-      "sprite": "assets/sprites/vivillonfancy.png"
+      "sprite": "assets/sprites/vivillon.png"
     },
     "volcarona": {
       "name": "Volcarona",
@@ -106398,34 +106329,6 @@
       "singles": null,
       "sprite": "assets/sprites/feraligatrmega.png"
     },
-    "floetteeternal": {
-      "name": "Floette-Eternal",
-      "showdownId": "floetteeternal",
-      "showdownName": "Floette",
-      "slug": "floette",
-      "isForm": true,
-      "baseName": "Floette",
-      "types": [
-        "Fairy"
-      ],
-      "abilities": [
-        "Flower Veil",
-        "Symbiosis"
-      ],
-      "hiddenAbility": null,
-      "baseStats": {
-        "hp": 74,
-        "attack": 65,
-        "defense": 67,
-        "sp_attack": 125,
-        "sp_defense": 128,
-        "speed": 92
-      },
-      "baseStatTotal": 551,
-      "doubles": null,
-      "singles": null,
-      "sprite": "assets/sprites/floetteeternal.png"
-    },
     "floettemega": {
       "name": "Floette-Eternal-Mega",
       "showdownId": "floettemega",
@@ -106441,14 +106344,14 @@
       ],
       "hiddenAbility": null,
       "baseStats": {
-        "hp": 149,
-        "attack": 105,
-        "defense": 107,
-        "sp_attack": 175,
-        "sp_defense": 168,
-        "speed": 122
+        "hp": 74,
+        "attack": 85,
+        "defense": 87,
+        "sp_attack": 155,
+        "sp_defense": 148,
+        "speed": 102
       },
-      "baseStatTotal": 826,
+      "baseStatTotal": 651,
       "doubles": null,
       "singles": null,
       "sprite": "assets/sprites/floettemega.png"
@@ -106675,36 +106578,6 @@
       "doubles": null,
       "singles": null,
       "sprite": "assets/sprites/golurkmega.png"
-    },
-    "gourgeistjumbo": {
-      "name": "Gourgeist-Jumbo",
-      "showdownId": "gourgeistjumbo",
-      "showdownName": "Gourgeist Jumbo Variety",
-      "slug": "gourgeistjumbovariety",
-      "isForm": true,
-      "baseName": "Gourgeist",
-      "types": [
-        "Ghost",
-        "Grass"
-      ],
-      "abilities": [
-        "Pickup",
-        "Frisk",
-        "Insomnia"
-      ],
-      "hiddenAbility": null,
-      "baseStats": {
-        "hp": 160,
-        "attack": 120,
-        "defense": 142,
-        "sp_attack": 78,
-        "sp_defense": 95,
-        "speed": 74
-      },
-      "baseStatTotal": 669,
-      "doubles": null,
-      "singles": null,
-      "sprite": "assets/sprites/gourgeistjumbo.png"
     },
     "greninjamega": {
       "name": "Greninja-Mega",
@@ -107767,9 +107640,9 @@
       "singles": null,
       "sprite": "assets/sprites/victreebelmega.png"
     },
-    "vivillon": {
-      "name": "Vivillon",
-      "showdownId": "vivillon",
+    "vivillonicysnowpattern": {
+      "name": "Vivillon-Icysnowpattern",
+      "showdownId": "vivillonicysnowpattern",
       "showdownName": "Vivillon Icy Snow Pattern",
       "slug": "vivillonicysnowpattern",
       "isForm": true,
@@ -107785,17 +107658,587 @@
       ],
       "hiddenAbility": null,
       "baseStats": {
-        "hp": 80,
-        "attack": 52,
-        "defense": 50,
-        "sp_attack": 90,
-        "sp_defense": 50,
-        "speed": 89
+        "hp": 155,
+        "attack": 72,
+        "defense": 70,
+        "sp_attack": 110,
+        "sp_defense": 70,
+        "speed": 109
       },
-      "baseStatTotal": 411,
+      "baseStatTotal": 586,
       "doubles": null,
       "singles": null,
-      "sprite": "assets/sprites/vivillon.png"
+      "sprite": "assets/sprites/vivillonicysnowpattern.png"
+    },
+    "vivillonarchipelagopattern": {
+      "name": "Vivillon-Archipelagopattern",
+      "showdownId": "vivillonarchipelagopattern",
+      "showdownName": "Vivillon Archipelago Pattern",
+      "slug": "vivillonarchipelagopattern",
+      "isForm": true,
+      "baseName": "Vivillon",
+      "types": [
+        "Bug",
+        "Flying"
+      ],
+      "abilities": [
+        "Shield Dust",
+        "Compound Eyes",
+        "Friend Guard"
+      ],
+      "hiddenAbility": null,
+      "baseStats": {
+        "hp": 155,
+        "attack": 72,
+        "defense": 70,
+        "sp_attack": 110,
+        "sp_defense": 70,
+        "speed": 109
+      },
+      "baseStatTotal": 586,
+      "doubles": null,
+      "singles": null,
+      "sprite": "assets/sprites/vivillonarchipelagopattern.png"
+    },
+    "vivilloncontinentalpattern": {
+      "name": "Vivillon-Continentalpattern",
+      "showdownId": "vivilloncontinentalpattern",
+      "showdownName": "Vivillon Continental Pattern",
+      "slug": "vivilloncontinentalpattern",
+      "isForm": true,
+      "baseName": "Vivillon",
+      "types": [
+        "Bug",
+        "Flying"
+      ],
+      "abilities": [
+        "Shield Dust",
+        "Compound Eyes",
+        "Friend Guard"
+      ],
+      "hiddenAbility": null,
+      "baseStats": {
+        "hp": 155,
+        "attack": 72,
+        "defense": 70,
+        "sp_attack": 110,
+        "sp_defense": 70,
+        "speed": 109
+      },
+      "baseStatTotal": 586,
+      "doubles": null,
+      "singles": null,
+      "sprite": "assets/sprites/vivilloncontinentalpattern.png"
+    },
+    "vivillonelegantpattern": {
+      "name": "Vivillon-Elegantpattern",
+      "showdownId": "vivillonelegantpattern",
+      "showdownName": "Vivillon Elegant Pattern",
+      "slug": "vivillonelegantpattern",
+      "isForm": true,
+      "baseName": "Vivillon",
+      "types": [
+        "Bug",
+        "Flying"
+      ],
+      "abilities": [
+        "Shield Dust",
+        "Compound Eyes",
+        "Friend Guard"
+      ],
+      "hiddenAbility": null,
+      "baseStats": {
+        "hp": 155,
+        "attack": 72,
+        "defense": 70,
+        "sp_attack": 110,
+        "sp_defense": 70,
+        "speed": 109
+      },
+      "baseStatTotal": 586,
+      "doubles": null,
+      "singles": null,
+      "sprite": "assets/sprites/vivillonelegantpattern.png"
+    },
+    "vivillonfancypattern": {
+      "name": "Vivillon-Fancypattern",
+      "showdownId": "vivillonfancypattern",
+      "showdownName": "Vivillon Fancy Pattern",
+      "slug": "vivillonfancypattern",
+      "isForm": true,
+      "baseName": "Vivillon",
+      "types": [
+        "Bug",
+        "Flying"
+      ],
+      "abilities": [
+        "Shield Dust",
+        "Compound Eyes",
+        "Friend Guard"
+      ],
+      "hiddenAbility": null,
+      "baseStats": {
+        "hp": 155,
+        "attack": 72,
+        "defense": 70,
+        "sp_attack": 110,
+        "sp_defense": 70,
+        "speed": 109
+      },
+      "baseStatTotal": 586,
+      "doubles": null,
+      "singles": null,
+      "sprite": "assets/sprites/vivillonfancypattern.png"
+    },
+    "vivillongardenpattern": {
+      "name": "Vivillon-Gardenpattern",
+      "showdownId": "vivillongardenpattern",
+      "showdownName": "Vivillon Garden Pattern",
+      "slug": "vivillongardenpattern",
+      "isForm": true,
+      "baseName": "Vivillon",
+      "types": [
+        "Bug",
+        "Flying"
+      ],
+      "abilities": [
+        "Shield Dust",
+        "Compound Eyes",
+        "Friend Guard"
+      ],
+      "hiddenAbility": null,
+      "baseStats": {
+        "hp": 155,
+        "attack": 72,
+        "defense": 70,
+        "sp_attack": 110,
+        "sp_defense": 70,
+        "speed": 109
+      },
+      "baseStatTotal": 586,
+      "doubles": null,
+      "singles": null,
+      "sprite": "assets/sprites/vivillongardenpattern.png"
+    },
+    "vivillonhighplainspattern": {
+      "name": "Vivillon-Highplainspattern",
+      "showdownId": "vivillonhighplainspattern",
+      "showdownName": "Vivillon High Plains Pattern",
+      "slug": "vivillonhighplainspattern",
+      "isForm": true,
+      "baseName": "Vivillon",
+      "types": [
+        "Bug",
+        "Flying"
+      ],
+      "abilities": [
+        "Shield Dust",
+        "Compound Eyes",
+        "Friend Guard"
+      ],
+      "hiddenAbility": null,
+      "baseStats": {
+        "hp": 155,
+        "attack": 72,
+        "defense": 70,
+        "sp_attack": 110,
+        "sp_defense": 70,
+        "speed": 109
+      },
+      "baseStatTotal": 586,
+      "doubles": null,
+      "singles": null,
+      "sprite": "assets/sprites/vivillonhighplainspattern.png"
+    },
+    "vivillonjunglepattern": {
+      "name": "Vivillon-Junglepattern",
+      "showdownId": "vivillonjunglepattern",
+      "showdownName": "Vivillon Jungle Pattern",
+      "slug": "vivillonjunglepattern",
+      "isForm": true,
+      "baseName": "Vivillon",
+      "types": [
+        "Bug",
+        "Flying"
+      ],
+      "abilities": [
+        "Shield Dust",
+        "Compound Eyes",
+        "Friend Guard"
+      ],
+      "hiddenAbility": null,
+      "baseStats": {
+        "hp": 155,
+        "attack": 72,
+        "defense": 70,
+        "sp_attack": 110,
+        "sp_defense": 70,
+        "speed": 109
+      },
+      "baseStatTotal": 586,
+      "doubles": null,
+      "singles": null,
+      "sprite": "assets/sprites/vivillonjunglepattern.png"
+    },
+    "vivillonmarinepattern": {
+      "name": "Vivillon-Marinepattern",
+      "showdownId": "vivillonmarinepattern",
+      "showdownName": "Vivillon Marine Pattern",
+      "slug": "vivillonmarinepattern",
+      "isForm": true,
+      "baseName": "Vivillon",
+      "types": [
+        "Bug",
+        "Flying"
+      ],
+      "abilities": [
+        "Shield Dust",
+        "Compound Eyes",
+        "Friend Guard"
+      ],
+      "hiddenAbility": null,
+      "baseStats": {
+        "hp": 155,
+        "attack": 72,
+        "defense": 70,
+        "sp_attack": 110,
+        "sp_defense": 70,
+        "speed": 109
+      },
+      "baseStatTotal": 586,
+      "doubles": null,
+      "singles": null,
+      "sprite": "assets/sprites/vivillonmarinepattern.png"
+    },
+    "vivillonmeadowpattern": {
+      "name": "Vivillon-Meadowpattern",
+      "showdownId": "vivillonmeadowpattern",
+      "showdownName": "Vivillon Meadow Pattern",
+      "slug": "vivillonmeadowpattern",
+      "isForm": true,
+      "baseName": "Vivillon",
+      "types": [
+        "Bug",
+        "Flying"
+      ],
+      "abilities": [
+        "Shield Dust",
+        "Compound Eyes",
+        "Friend Guard"
+      ],
+      "hiddenAbility": null,
+      "baseStats": {
+        "hp": 155,
+        "attack": 72,
+        "defense": 70,
+        "sp_attack": 110,
+        "sp_defense": 70,
+        "speed": 109
+      },
+      "baseStatTotal": 586,
+      "doubles": null,
+      "singles": null,
+      "sprite": "assets/sprites/vivillonmeadowpattern.png"
+    },
+    "vivillonmodernpattern": {
+      "name": "Vivillon-Modernpattern",
+      "showdownId": "vivillonmodernpattern",
+      "showdownName": "Vivillon Modern Pattern",
+      "slug": "vivillonmodernpattern",
+      "isForm": true,
+      "baseName": "Vivillon",
+      "types": [
+        "Bug",
+        "Flying"
+      ],
+      "abilities": [
+        "Shield Dust",
+        "Compound Eyes",
+        "Friend Guard"
+      ],
+      "hiddenAbility": null,
+      "baseStats": {
+        "hp": 155,
+        "attack": 72,
+        "defense": 70,
+        "sp_attack": 110,
+        "sp_defense": 70,
+        "speed": 109
+      },
+      "baseStatTotal": 586,
+      "doubles": null,
+      "singles": null,
+      "sprite": "assets/sprites/vivillonmodernpattern.png"
+    },
+    "vivillonmonsoonpattern": {
+      "name": "Vivillon-Monsoonpattern",
+      "showdownId": "vivillonmonsoonpattern",
+      "showdownName": "Vivillon Monsoon Pattern",
+      "slug": "vivillonmonsoonpattern",
+      "isForm": true,
+      "baseName": "Vivillon",
+      "types": [
+        "Bug",
+        "Flying"
+      ],
+      "abilities": [
+        "Shield Dust",
+        "Compound Eyes",
+        "Friend Guard"
+      ],
+      "hiddenAbility": null,
+      "baseStats": {
+        "hp": 155,
+        "attack": 72,
+        "defense": 70,
+        "sp_attack": 110,
+        "sp_defense": 70,
+        "speed": 109
+      },
+      "baseStatTotal": 586,
+      "doubles": null,
+      "singles": null,
+      "sprite": "assets/sprites/vivillonmonsoonpattern.png"
+    },
+    "vivillonoceanpattern": {
+      "name": "Vivillon-Oceanpattern",
+      "showdownId": "vivillonoceanpattern",
+      "showdownName": "Vivillon Ocean Pattern",
+      "slug": "vivillonoceanpattern",
+      "isForm": true,
+      "baseName": "Vivillon",
+      "types": [
+        "Bug",
+        "Flying"
+      ],
+      "abilities": [
+        "Shield Dust",
+        "Compound Eyes",
+        "Friend Guard"
+      ],
+      "hiddenAbility": null,
+      "baseStats": {
+        "hp": 155,
+        "attack": 72,
+        "defense": 70,
+        "sp_attack": 110,
+        "sp_defense": 70,
+        "speed": 109
+      },
+      "baseStatTotal": 586,
+      "doubles": null,
+      "singles": null,
+      "sprite": "assets/sprites/vivillonoceanpattern.png"
+    },
+    "vivillonpokballpattern": {
+      "name": "Vivillon-Pokballpattern",
+      "showdownId": "vivillonpokballpattern",
+      "showdownName": "Vivillon Poké Ball Pattern",
+      "slug": "vivillonpokballpattern",
+      "isForm": true,
+      "baseName": "Vivillon",
+      "types": [
+        "Bug",
+        "Flying"
+      ],
+      "abilities": [
+        "Shield Dust",
+        "Compound Eyes",
+        "Friend Guard"
+      ],
+      "hiddenAbility": null,
+      "baseStats": {
+        "hp": 155,
+        "attack": 72,
+        "defense": 70,
+        "sp_attack": 110,
+        "sp_defense": 70,
+        "speed": 109
+      },
+      "baseStatTotal": 586,
+      "doubles": null,
+      "singles": null,
+      "sprite": "assets/sprites/vivillonpokballpattern.png"
+    },
+    "vivillonpolarpattern": {
+      "name": "Vivillon-Polarpattern",
+      "showdownId": "vivillonpolarpattern",
+      "showdownName": "Vivillon Polar Pattern",
+      "slug": "vivillonpolarpattern",
+      "isForm": true,
+      "baseName": "Vivillon",
+      "types": [
+        "Bug",
+        "Flying"
+      ],
+      "abilities": [
+        "Shield Dust",
+        "Compound Eyes",
+        "Friend Guard"
+      ],
+      "hiddenAbility": null,
+      "baseStats": {
+        "hp": 155,
+        "attack": 72,
+        "defense": 70,
+        "sp_attack": 110,
+        "sp_defense": 70,
+        "speed": 109
+      },
+      "baseStatTotal": 586,
+      "doubles": null,
+      "singles": null,
+      "sprite": "assets/sprites/vivillonpolarpattern.png"
+    },
+    "vivillonriverpattern": {
+      "name": "Vivillon-Riverpattern",
+      "showdownId": "vivillonriverpattern",
+      "showdownName": "Vivillon River Pattern",
+      "slug": "vivillonriverpattern",
+      "isForm": true,
+      "baseName": "Vivillon",
+      "types": [
+        "Bug",
+        "Flying"
+      ],
+      "abilities": [
+        "Shield Dust",
+        "Compound Eyes",
+        "Friend Guard"
+      ],
+      "hiddenAbility": null,
+      "baseStats": {
+        "hp": 155,
+        "attack": 72,
+        "defense": 70,
+        "sp_attack": 110,
+        "sp_defense": 70,
+        "speed": 109
+      },
+      "baseStatTotal": 586,
+      "doubles": null,
+      "singles": null,
+      "sprite": "assets/sprites/vivillonriverpattern.png"
+    },
+    "vivillonsandstormpattern": {
+      "name": "Vivillon-Sandstormpattern",
+      "showdownId": "vivillonsandstormpattern",
+      "showdownName": "Vivillon Sandstorm Pattern",
+      "slug": "vivillonsandstormpattern",
+      "isForm": true,
+      "baseName": "Vivillon",
+      "types": [
+        "Bug",
+        "Flying"
+      ],
+      "abilities": [
+        "Shield Dust",
+        "Compound Eyes",
+        "Friend Guard"
+      ],
+      "hiddenAbility": null,
+      "baseStats": {
+        "hp": 155,
+        "attack": 72,
+        "defense": 70,
+        "sp_attack": 110,
+        "sp_defense": 70,
+        "speed": 109
+      },
+      "baseStatTotal": 586,
+      "doubles": null,
+      "singles": null,
+      "sprite": "assets/sprites/vivillonsandstormpattern.png"
+    },
+    "vivillonsavannapattern": {
+      "name": "Vivillon-Savannapattern",
+      "showdownId": "vivillonsavannapattern",
+      "showdownName": "Vivillon Savanna Pattern",
+      "slug": "vivillonsavannapattern",
+      "isForm": true,
+      "baseName": "Vivillon",
+      "types": [
+        "Bug",
+        "Flying"
+      ],
+      "abilities": [
+        "Shield Dust",
+        "Compound Eyes",
+        "Friend Guard"
+      ],
+      "hiddenAbility": null,
+      "baseStats": {
+        "hp": 155,
+        "attack": 72,
+        "defense": 70,
+        "sp_attack": 110,
+        "sp_defense": 70,
+        "speed": 109
+      },
+      "baseStatTotal": 586,
+      "doubles": null,
+      "singles": null,
+      "sprite": "assets/sprites/vivillonsavannapattern.png"
+    },
+    "vivillonsunpattern": {
+      "name": "Vivillon-Sunpattern",
+      "showdownId": "vivillonsunpattern",
+      "showdownName": "Vivillon Sun Pattern",
+      "slug": "vivillonsunpattern",
+      "isForm": true,
+      "baseName": "Vivillon",
+      "types": [
+        "Bug",
+        "Flying"
+      ],
+      "abilities": [
+        "Shield Dust",
+        "Compound Eyes",
+        "Friend Guard"
+      ],
+      "hiddenAbility": null,
+      "baseStats": {
+        "hp": 155,
+        "attack": 72,
+        "defense": 70,
+        "sp_attack": 110,
+        "sp_defense": 70,
+        "speed": 109
+      },
+      "baseStatTotal": 586,
+      "doubles": null,
+      "singles": null,
+      "sprite": "assets/sprites/vivillonsunpattern.png"
+    },
+    "vivillontundrapattern": {
+      "name": "Vivillon-Tundrapattern",
+      "showdownId": "vivillontundrapattern",
+      "showdownName": "Vivillon Tundra Pattern",
+      "slug": "vivillontundrapattern",
+      "isForm": true,
+      "baseName": "Vivillon",
+      "types": [
+        "Bug",
+        "Flying"
+      ],
+      "abilities": [
+        "Shield Dust",
+        "Compound Eyes",
+        "Friend Guard"
+      ],
+      "hiddenAbility": null,
+      "baseStats": {
+        "hp": 155,
+        "attack": 72,
+        "defense": 70,
+        "sp_attack": 110,
+        "sp_defense": 70,
+        "speed": 109
+      },
+      "baseStatTotal": 586,
+      "doubles": null,
+      "singles": null,
+      "sprite": "assets/sprites/vivillontundrapattern.png"
     }
   }
 }

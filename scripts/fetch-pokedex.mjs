@@ -35,7 +35,7 @@
 
 import { writeFile, mkdir } from "node:fs/promises";
 import path from "node:path";
-import { toId, deriveShowdownId, deriveDisplayName, derivePokeApiSlug, guessPokeApiSlug } from "./species-naming.mjs";
+import { toId, deriveShowdownId, deriveDisplayName, derivePokeApiSlug, guessPokeApiSlug, guessDisplayName } from "./species-naming.mjs";
 
 process.on("unhandledRejection", (err) => {
   console.error("UNHANDLED REJECTION:", err?.stack || err);
@@ -260,7 +260,7 @@ async function buildRecord(entry) {
   // convention. Falls back to the raw name if baseName is missing.
   const normalizedName = entry.baseName
     ? deriveDisplayName({ base_name: entry.baseName, saved_name: entry.name })
-    : entry.name;
+    : guessDisplayName(entry.showdownId);
 
   const pokeApiSlug = entry.baseName
     ? derivePokeApiSlug({ base_name: entry.baseName, saved_name: entry.name })
@@ -472,7 +472,11 @@ async function run() {
   const pokedex = {};
   let done = 0;
   for (const entry of entries) {
-    pokedex[entry.showdownId] = await buildRecord(entry);
+    const canonicalShowdownId = entry.baseName
+      ? deriveShowdownId({ base_name: entry.baseName, saved_name: entry.name })
+      : toId(guessDisplayName(entry.showdownId));
+    const canonicalEntry = { ...entry, showdownId: canonicalShowdownId };
+    pokedex[canonicalShowdownId] = await buildRecord(canonicalEntry);
     done++;
     if (done % 25 === 0) console.log(`  ${done}/${entries.length}…`);
   }
@@ -484,6 +488,23 @@ async function run() {
   // every page load), so it has zero impact on site load speed.
   const baseNames = new Set(entries.map(e => e.baseName || e.slug || e.showdownId).filter(Boolean));
   await flattenFormsFromMetadata(pokedex, baseNames);
+
+  // Final safety net: if ANY entry's name still contains a raw
+  // championsbattledata suffix word (meaning it slipped through without
+  // going through deriveDisplayName — e.g. if their bulk index lists a
+  // form as its own top-level entry with a showdownId that doesn't
+  // match what we derive for the same form via metadata), clean it up
+  // here rather than shipping the raw text.
+  const RAW_SUFFIX_WORDS = /\s+(Form|Forme|Pattern|Flower|Breed|Variety)\b/gi;
+  let namesCleaned = 0;
+  for (const key of Object.keys(pokedex)) {
+    const entry = pokedex[key];
+    if (entry?.name && RAW_SUFFIX_WORDS.test(entry.name)) {
+      entry.name = entry.name.replace(RAW_SUFFIX_WORDS, "").trim();
+      namesCleaned++;
+    }
+  }
+  if (namesCleaned) console.log(`  Cleaned ${namesCleaned} entries with a raw suffix word still in their name.`);
 
   await writeFile(
     OUT_FILE,

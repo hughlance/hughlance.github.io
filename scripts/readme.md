@@ -1,0 +1,1 @@
+run fetch-pokedex -> fetch-usage
