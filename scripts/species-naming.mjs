@@ -301,8 +301,12 @@ function rowPokeApiSlugOverride(row) {
       // slug; each gender has its own real Mega stat block on PokeAPI.
       return /\bf(emale)?\b/i.test(row.saved_name) ? "meowstic-female-mega" : "meowstic-male-mega";
     }
-    if (/\bf(emale)?\b/i.test(row.saved_name)) return "meowstic-f";
-    return "meowstic";
+    if (/\bf(emale)?\b/i.test(row.saved_name)) return "meowstic-female";
+    return "meowstic-male";
+  }
+  if (base === "basculegion") {
+    if (/\bf(emale)?\b/i.test(row.saved_name)) return "basculegion-female";
+    return "basculegion-male";
   }
   if (base === "floette") {
     // Only exists as Eternal Flower in this game — always the real

@@ -265,7 +265,8 @@ function formeFamilyKey(name){
     .toLowerCase();
 }
 
-function renderFormeCycleButton(allNames, currentName, onCycle){
+function renderFormeCycleButton(allNames, currentName, onCycle, enabled = true){
+  if (!enabled) return null;
   const family = allNames.filter(n => formeFamilyKey(n) === formeFamilyKey(currentName));
   if (family.length < 2) return null;
   const btn = document.createElement("button");
@@ -710,6 +711,12 @@ async function renderMain(){
 function normalizeChampionsMon(mon, dex){
   const fmtData = mon[state.champFormat];
   if (!fmtData) return null;
+  const currentNames = Object.values(dex.pokemon)
+    .filter(p => p[state.champFormat]?.rank != null)
+    .map(p => p.name);
+  const cycleNames = currentNames.filter(name =>
+    formeFamilyKey(name) === "meowstic" || !isMegaName(name)
+  );
   return {
     buildKey: `champions:${state.champFormat}:${mon.showdownId}`,
     name: mon.name,
@@ -738,7 +745,8 @@ function normalizeChampionsMon(mon, dex){
       const found = Object.values(dex.pokemon).find(p => p.name === name);
       if (found){ state.selectedKey = found.showdownId; renderSidebarList(); renderMain(); }
     },
-    cycleNames: Object.values(dex.pokemon).map(p => p.name),
+    cycleNames,
+    cycleEnabled: true,
   };
 }
 
@@ -767,7 +775,12 @@ function normalizeSmogonMon(mon, data){
   else if (mon.name === "Meowstic-F-Mega") defaultAbilityOverride = "Competitive";
   else if (isMegaName(mon.name)){
     const baseName = stripMegaSuffix(mon.name);
-    const baseMon = (data.ratings[state.eloRating] || []).find(d => d.name === baseName);
+    const ratingKeysByDistance = Object.keys(data.ratings)
+      .map(Number)
+      .sort((a, b) => Math.abs(a - state.eloRating) - Math.abs(b - state.eloRating));
+    const baseMon = ratingKeysByDistance
+      .map(rating => (data.ratings[rating] || []).find(d => d.name === baseName))
+      .find(Boolean);
     if (baseMon) defaultAbilityOverride = firstValid(baseMon.abilities);
   }
 
@@ -836,7 +849,7 @@ function renderUnifiedDetail(main, norm){
   avatar.className = "detail-avatar";
   if (norm.sprite){ avatar.src = norm.sprite; } else { avatar.textContent = norm.name.slice(0,2).toUpperCase(); avatar.style.color = color; }
   avatarWrap.appendChild(avatar);
-  const cycleBtn = renderFormeCycleButton(norm.cycleNames, norm.name, norm.onSelectRelated);
+  const cycleBtn = renderFormeCycleButton(norm.cycleNames, norm.name, norm.onSelectRelated, norm.cycleEnabled);
   if (cycleBtn) avatarWrap.appendChild(cycleBtn);
 
   const titleWrap = document.createElement("div");
