@@ -78249,15 +78249,22 @@
       "sprite": "assets/sprites/rotom.png"
     },
     "rotomfan": {
-      "name": "Rotomfan",
+      "name": "Rotom-Fan",
       "showdownId": "rotomfan",
       "showdownName": "Rotom-Fan",
       "slug": "rotom-fan",
       "types": [],
       "abilities": [],
       "hiddenAbility": null,
-      "baseStats": null,
-      "baseStatTotal": null,
+      "baseStats": {
+        "hp": 50,
+        "attack": 65,
+        "defense": 107,
+        "sp_attack": 105,
+        "sp_defense": 107,
+        "speed": 86
+      },
+      "baseStatTotal": 520,
       "doubles": {
         "rank": 219,
         "moves": [
@@ -78679,15 +78686,22 @@
       "sprite": "assets/sprites/rotomfan.png"
     },
     "rotomfrost": {
-      "name": "Rotomfrost",
+      "name": "Rotom-Frost",
       "showdownId": "rotomfrost",
       "showdownName": "Rotom-Frost",
       "slug": "rotom-frost",
       "types": [],
       "abilities": [],
       "hiddenAbility": null,
-      "baseStats": null,
-      "baseStatTotal": null,
+      "baseStats": {
+        "hp": 50,
+        "attack": 65,
+        "defense": 107,
+        "sp_attack": 105,
+        "sp_defense": 107,
+        "speed": 86
+      },
+      "baseStatTotal": 520,
       "doubles": {
         "rank": 179,
         "moves": [
@@ -79089,15 +79103,22 @@
       "sprite": "assets/sprites/rotomfrost.png"
     },
     "rotomheat": {
-      "name": "Rotomheat",
+      "name": "Rotom-Heat",
       "showdownId": "rotomheat",
       "showdownName": "Rotom-Heat",
       "slug": "rotom-heat",
       "types": [],
       "abilities": [],
       "hiddenAbility": null,
-      "baseStats": null,
-      "baseStatTotal": null,
+      "baseStats": {
+        "hp": 50,
+        "attack": 65,
+        "defense": 107,
+        "sp_attack": 105,
+        "sp_defense": 107,
+        "speed": 86
+      },
+      "baseStatTotal": 520,
       "doubles": {
         "rank": 91,
         "moves": [
@@ -79519,15 +79540,22 @@
       "sprite": "assets/sprites/rotomheat.png"
     },
     "rotommow": {
-      "name": "Rotommow",
+      "name": "Rotom-Mow",
       "showdownId": "rotommow",
       "showdownName": "Rotom-Mow",
       "slug": "rotom-mow",
       "types": [],
       "abilities": [],
       "hiddenAbility": null,
-      "baseStats": null,
-      "baseStatTotal": null,
+      "baseStats": {
+        "hp": 50,
+        "attack": 65,
+        "defense": 107,
+        "sp_attack": 105,
+        "sp_defense": 107,
+        "speed": 86
+      },
+      "baseStatTotal": 520,
       "doubles": {
         "rank": 191,
         "moves": [
@@ -79949,15 +79977,22 @@
       "sprite": "assets/sprites/rotommow.png"
     },
     "rotomwash": {
-      "name": "Rotomwash",
+      "name": "Rotom-Wash",
       "showdownId": "rotomwash",
       "showdownName": "Rotom-Wash",
       "slug": "rotom-wash",
       "types": [],
       "abilities": [],
       "hiddenAbility": null,
-      "baseStats": null,
-      "baseStatTotal": null,
+      "baseStats": {
+        "hp": 50,
+        "attack": 65,
+        "defense": 107,
+        "sp_attack": 105,
+        "sp_defense": 107,
+        "speed": 86
+      },
+      "baseStatTotal": 520,
       "doubles": {
         "rank": 44,
         "moves": [

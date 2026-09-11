@@ -26,6 +26,10 @@ export const titleCase = (s) => s.split(/[- ]/).map(w => w.charAt(0).toUpperCase
 // Species-specific exceptions that don't follow the generic Mega/
 // regional-suffix pattern below. Checked FIRST.
 export const SPECIAL_FORM_RULES = [
+  // Rotom forms arrive from Champions/Smogon as compact IDs such as
+  // "rotomfan", while PokeAPI and the site use hyphenated form names.
+  { test: /^rotom(fan|frost|heat|mow|wash)$/, asset: (m) => `Rotom ${titleCase(m[1])}`, display: (m) => `Rotom-${titleCase(m[1])}`, slug: (m) => `rotom-${m[1]}` },
+
   // Floette only exists as Eternal Flower in this game (no regular
   // color variants) — Mega Floette's export/display identity is still
   // Floette-Eternal (only Floette-Eternal can Mega Evolve), so its name
