@@ -1,0 +1,54 @@
+name: Run Daily Fetch Scripts
+
+on:
+  schedule:
+    # Runs at 02:00 UTC every day
+    - cron: '0 2 * * *'
+  # Allows you to manually trigger the script from the 'Actions' tab for testing
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  run-scripts:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Checkout your repo
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # 2. Set up Node.js
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      # 3. Install dependencies (if your scripts rely on npm packages)
+      # Skip or adjust this step if you don't use package.json dependencies
+      - name: Install dependencies
+        run: npm ci || npm install
+
+      # 4. Run your scripts in sequence
+      - name: Fetch Pokédex Data
+        run: node scripts/fetch-pokedex.mjs
+
+      - name: Fetch Usage Data
+        run: node scripts/fetch-usage.mjs
+
+      # 5. Commit & Push any updated or new files back to the main branch
+      - name: Commit and push changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add .
+          git status
+          
+          # Only commit if changes were generated
+          if ! git diff-index --quiet HEAD; then
+            git commit -m "chore: auto-update pokedex and usage data [skip ci]"
+            git push
+          else
+            echo "No changes detected, skipping commit."
+          fi
