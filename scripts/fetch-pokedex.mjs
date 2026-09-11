@@ -33,7 +33,7 @@
  * The Pokémon Company, per its own site footer.
  */
 
-import { writeFile, mkdir } from "node:fs/promises";
+import { writeFile, mkdir, access } from "node:fs/promises";
 import path from "node:path";
 import { toId, deriveShowdownId, deriveDisplayName, derivePokeApiSlug, guessPokeApiSlug, guessDisplayName } from "./species-naming.mjs";
 
@@ -72,14 +72,21 @@ function isValidPng(buf) {
 
 async function downloadSprite(imagePath, showdownId) {
   if (!imagePath) return null;
-  const url = ASSET_BASE + imagePath;
   const localName = `${showdownId}.png`;
+  const localPath = path.join(SPRITE_DIR, localName);
+  try {
+    await access(localPath);
+    return `assets/sprites/${localName}`;
+  } catch {
+    // Download only sprites that are not already stored locally.
+  }
+  const url = ASSET_BASE + imagePath;
   try {
     const res = await fetch(url);
     if (!res.ok) throw new Error(`sprite ${res.status}`);
     const buf = Buffer.from(await res.arrayBuffer());
     if (!isValidPng(buf)) throw new Error(`not a valid PNG (${buf.length} bytes)`);
-    await writeFile(path.join(SPRITE_DIR, localName), buf);
+    await writeFile(localPath, buf);
     return `assets/sprites/${localName}`; // relative path used by the site
   } catch (err) {
     console.warn(`  ⚠ sprite failed for ${showdownId}: ${err.message}`);

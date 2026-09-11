@@ -216,9 +216,9 @@
       <h1>Usage & Synergy</h1>
 
       <div class="source-tabs" id="sourceTabs">
+        <div class="source-tab" data-source="champions">Champions<br>In-Game</div>
         <div class="source-tab" data-source="bo1">Bo1<br>Ladder</div>
         <div class="source-tab" data-source="bo3">Bo3<br>Open Sheet</div>
-        <div class="source-tab" data-source="champions">Champions<br>In-Game</div>
       </div>
 
       <div class="sub-controls" id="eloTabs"></div>
@@ -304,7 +304,7 @@ function resolveSprite(sprite){
 }
 
 let state = {
-  source: "bo1",           // 'bo1' | 'bo3' | 'champions'
+  source: "champions",     // 'bo1' | 'bo3' | 'champions'
   eloRating: 1760,          // smogon only
   champFormat: "doubles",   // 'doubles' | 'singles', champions only
   search: "",

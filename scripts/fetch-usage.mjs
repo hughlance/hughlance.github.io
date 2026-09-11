@@ -45,7 +45,7 @@
  * an error telling you to do that.
  */
 
-import { writeFile, mkdir, readFile } from "node:fs/promises";
+import { writeFile, mkdir, readFile, access } from "node:fs/promises";
 import path from "node:path";
 import { toId, titleCase, guessPokeApiSlug, guessDisplayName, guessChampionsAssetName } from "./species-naming.mjs";
 
@@ -158,14 +158,23 @@ function isValidPng(buf) {
 
 async function fetchChampionsSpriteByName(assetName, chaosKey){
   if (CHAMPIONS_SPRITE_CACHE.has(chaosKey)) return CHAMPIONS_SPRITE_CACHE.get(chaosKey);
+  const localName = `${toId(chaosKey)}.png`;
+  const localPath = path.join(SPRITE_DIR, localName);
+  try {
+    await access(localPath);
+    const result = `assets/sprites/${localName}`;
+    CHAMPIONS_SPRITE_CACHE.set(chaosKey, result);
+    return result;
+  } catch {
+    // Download only sprites that are not already stored locally.
+  }
   const url = CHAMPIONS_ASSET_BASE + encodeURIComponent(assetName) + ".png";
   try {
     const res = await fetch(url);
     if (!res.ok) throw new Error(`${res.status}`);
     const buf = Buffer.from(await res.arrayBuffer());
     if (!isValidPng(buf)) throw new Error(`not a valid PNG (${buf.length} bytes)`);
-    const localName = `${toId(chaosKey)}.png`;
-    await writeFile(path.join(SPRITE_DIR, localName), buf);
+    await writeFile(localPath, buf);
     const result = `assets/sprites/${localName}`;
     CHAMPIONS_SPRITE_CACHE.set(chaosKey, result);
     return result;

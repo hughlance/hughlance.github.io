@@ -2,10 +2,9 @@ name: Update Champions VGC usage data
 
 on:
   schedule:
-    # Runs at 06:00 UTC on the 3rd of each month — Smogon's monthly
-    # stats for the prior month are usually published by then.
-    - cron: "0 6 3 * *"
-  workflow_dispatch: {} # lets you trigger it manually from the Actions tab
+    # Runs after the daily Champions refresh and once Smogon's prior-month stats are available.
+    - cron: "0 8 3 * *"
+  workflow_dispatch: {}
 
 permissions:
   contents: write
