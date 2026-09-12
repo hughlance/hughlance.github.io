@@ -396,14 +396,25 @@ async function renderSidebarList(){
   if (state.source === "champions"){
     try {
       const dex = await loadPokedex();
-      setFlag(`Live: Champions Battle Data · ${dex.count} Pokémon`, true);
       rows = Object.values(dex.pokemon)
         .map(p => ({
           key: p.showdownId, name: p.name, types: p.types,
           sprite: resolveSprite(p.sprite), metric: p[state.champFormat]?.rank ?? null,
         }))
-        .filter(r => r.metric !== null)
-        .sort((a, b) => a.metric - b.metric);
+        .sort((a, b) => {
+          const aRanked = a.metric !== null;
+          const bRanked = b.metric !== null;
+          if (aRanked && bRanked) return a.metric - b.metric;
+          if (aRanked) return -1;
+          if (bRanked) return 1;
+          return a.name.localeCompare(b.name);
+        });
+      const rankedCount = rows.filter(r => r.metric !== null).length;
+      const unrankedCount = rows.length - rankedCount;
+      setFlag(
+        `Live: Champions Battle Data · ${rows.length} shown (${rankedCount} ranked, ${unrankedCount} unranked/new) · index count: ${dex.count}`,
+        true
+      );
     } catch {
       setFlag("Champions data not available — run scripts/fetch-pokedex.mjs", false);
       rows = [];
@@ -475,7 +486,9 @@ async function renderSidebarList(){
     const metric = document.createElement("div");
     metric.className = "mon-metric";
     metric.style.color = "var(--text-muted)";
-    metric.textContent = state.source === "champions" ? "#" + r.metric : r.metric.toFixed(1) + "%";
+    metric.textContent = state.source === "champions"
+      ? (r.metric !== null ? "#" + r.metric : "Unranked")
+      : r.metric.toFixed(1) + "%";
 
     row.appendChild(rank);
     row.appendChild(avatar);
@@ -710,8 +723,9 @@ async function renderMain(){
 // normalizer function. ----------
 
 function normalizeChampionsMon(mon, dex){
-  const fmtData = mon[state.champFormat];
-  if (!fmtData) return null;
+  const fmtData = mon[state.champFormat] || {
+    rank: null, moves: [], items: [], abilities: [], natures: [], evSpreads: [], teammates: [],
+  };
   const currentNames = Object.values(dex.pokemon)
     .filter(p => p[state.champFormat]?.rank != null)
     .map(p => p.name);

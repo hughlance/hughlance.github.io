@@ -6,8 +6,8 @@
  * Pokémon Champions VGC formats you care about, across all four rating
  * cutoffs (0 / 1500+ / 1630+ / 1760+), so the site can show usage trends
  * across skill levels and each Pokémon's most common teammates. Only the
- * Champions VGC formats listed in FORMATS are ever fetched — no other
- * format's data is downloaded or stored.
+ * Champions VGC formats that pass runtime slug checks are fetched — no
+ * other format's data is downloaded or stored.
  *
  * Smogon publishes one chaos JSON per format per rating cutoff, at:
  *   https://www.smogon.com/stats/{YYYY-MM}/chaos/{format-slug}-{rating}.json
@@ -17,7 +17,7 @@
  * (Verified against https://www.smogon.com/stats/2026-07/gen9championsvgc2026regmbbo3-1760.txt)
  * If a regulation's slug doesn't follow this pattern, check the directory
  * listing at https://www.smogon.com/stats/{YYYY-MM}/chaos/ to confirm it
- * before adding it to FORMATS below.
+ * before adding it to FORMAT_CANDIDATES below.
  *
  * IMPORTANT — percentage math: only the top-level "usage" field in chaos
  * JSON is a ready-to-use fraction of the whole metagame. The per-Pokémon
@@ -61,22 +61,18 @@ process.on("uncaughtException", (err) => {
   process.exit(1);
 });
 
-// ---- Configure: only the Champions VGC formats this app supports ----
+// ---- Configure: Champions VGC format candidates this app should try ----
 const MONTH_OVERRIDE = null;        // set to "YYYY-MM" to pin a month, or leave null to auto-use last month
 const RATINGS = [0, 1500, 1630, 1760]; // all four cutoffs, low ladder to top cut
 
-const FORMATS = {
-  "Regulation M-B — Bo1 (Ladder, Closed Teamsheet)": "gen9championsvgc2026regmb", // ⚠ verify — see note below
-  "Regulation M-B — Bo3 (Open Teamsheet)": "gen9championsvgc2026regmbbo3",       // confirmed against the .txt report
-  // "Regulation M-A (Bo3)": "gen9championsvgc2026regmabo3", // add once slug is confirmed
-  // "Regulation M-C (Bo3)": "gen9championsvgc2026regmcbo3", // add when M-C launches
-};
-// Note on the Bo1 slug: Bo3/open-teamsheet formats get a "bo3" suffix
-// (confirmed), so Bo1/ladder is assumed to be the plain slug with no
-// suffix — that's Smogon's usual convention, but it hasn't been checked
-// against a live directory listing. Confirm at
-// https://www.smogon.com/stats/{YYYY-MM}/chaos/ before relying on it;
-// adjust the string above if the real slug differs.
+const FORMAT_CANDIDATES = [
+  { label: "Regulation M-B — Bo1 (Ladder, Closed Teamsheet)", slug: "gen9championsvgc2026regmb" },
+  { label: "Regulation M-B — Bo3 (Open Teamsheet)", slug: "gen9championsvgc2026regmbbo3" },
+  { label: "Regulation M-C — Bo1 (Ladder, Closed Teamsheet)", slug: "gen9championsvgc2026regmc" },
+  { label: "Regulation M-C — Bo3 (Open Teamsheet)", slug: "gen9championsvgc2026regmcbo3" },
+];
+// Candidate slugs are confirmed at runtime against target-month chaos files
+// before parsing, so only live formats are included in output/manifest.
 const DETAIL_LIMITS = { teammates: 6, abilities: 4, items: 6, moves: 8, spreads: 4, natures: 4, checks: 6 };
 const POKEDEX_PATH = path.join(process.cwd(), "data", "pokedex.json");
 // -----------------------------------------------------------------------
@@ -113,6 +109,40 @@ async function fetchChaosJson(slug, rating) {
   } finally {
     clearTimeout(timeout);
   }
+}
+
+async function formatSlugExists(slug, rating) {
+  const url = `https://www.smogon.com/stats/${MONTH}/chaos/${slug}-${rating}.json`;
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), 15000);
+  try {
+    const head = await fetch(url, { method: "HEAD", signal: controller.signal });
+    if (head.ok) return true;
+    if (head.status !== 405) return false; // some endpoints disallow HEAD
+    const get = await fetch(url, { signal: controller.signal });
+    return get.ok;
+  } catch {
+    return false;
+  } finally {
+    clearTimeout(timeout);
+  }
+}
+
+async function resolveActiveFormats() {
+  const probeRatings = [1760, 1500, 0];
+  const active = [];
+  for (const format of FORMAT_CANDIDATES) {
+    let found = false;
+    for (const rating of probeRatings) {
+      if (await formatSlugExists(format.slug, rating)) {
+        found = true;
+        break;
+      }
+    }
+    if (found) active.push(format);
+    else console.warn(`Skipping unavailable format slug for ${MONTH}: ${format.slug}`);
+  }
+  return active;
 }
 
 // ---------------------------------------------------------------------
@@ -425,9 +455,12 @@ async function run() {
   await loadPokedex();
   await buildNameDictionaries();
 
+  const formats = await resolveActiveFormats();
+  if (!formats.length) throw new Error(`No available Champions format slugs found for ${MONTH} in Smogon chaos files.`);
+
   const manifest = [];
 
-  for (const [label, slug] of Object.entries(FORMATS)) {
+  for (const { label, slug } of formats) {
     console.log(`Fetching ${label} (${slug}) — ${MONTH}, ratings ${RATINGS.join("/")}`);
     const byRating = {};
 
