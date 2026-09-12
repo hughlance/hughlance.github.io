@@ -479,10 +479,16 @@ async function run() {
   const pokedex = {};
   let done = 0;
   for (const entry of entries) {
+    const rawShowdownKey = entry.showdownId ?? entry.slug ?? entry.name ?? null;
     const canonicalShowdownId = entry.baseName
       ? deriveShowdownId({ base_name: entry.baseName, saved_name: entry.name })
-      : toId(guessDisplayName(entry.showdownId));
-    const canonicalEntry = { ...entry, showdownId: canonicalShowdownId };
+      : (rawShowdownKey ? toId(guessDisplayName(rawShowdownKey)) : "");
+    if (!canonicalShowdownId) {
+      console.warn("  ⚠ skipped an index row with no usable identifier");
+      done++;
+      continue;
+    }
+    const canonicalEntry = { ...entry, showdownId: rawShowdownKey || canonicalShowdownId };
     pokedex[canonicalShowdownId] = await buildRecord(canonicalEntry);
     done++;
     if (done % 25 === 0) console.log(`  ${done}/${entries.length}…`);
