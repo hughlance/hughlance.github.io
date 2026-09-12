@@ -8969,7 +8969,7 @@
           "Bug",
           "Flying"
         ],
-        "sprite": "assets/sprites/vivillon.png",
+        "sprite": "assets/sprites/vivillonfancy.png",
         "baseStats": {
           "hp": 80,
           "attack": 52,
@@ -44334,7 +44334,7 @@
         "types": [
           "Fairy"
         ],
-        "sprite": "assets/sprites/floetteeternal.png",
+        "sprite": "assets/sprites/floette.png",
         "baseStats": {
           "hp": 74,
           "attack": 65,
@@ -61683,7 +61683,7 @@
           "Bug",
           "Flying"
         ],
-        "sprite": "assets/sprites/vivillon.png",
+        "sprite": "assets/sprites/vivillonfancy.png",
         "baseStats": {
           "hp": 80,
           "attack": 52,
@@ -94232,7 +94232,7 @@
         "types": [
           "Fairy"
         ],
-        "sprite": "assets/sprites/floetteeternal.png",
+        "sprite": "assets/sprites/floette.png",
         "baseStats": {
           "hp": 74,
           "attack": 65,
@@ -110264,7 +110264,7 @@
           "Bug",
           "Flying"
         ],
-        "sprite": "assets/sprites/vivillon.png",
+        "sprite": "assets/sprites/vivillonfancy.png",
         "baseStats": {
           "hp": 80,
           "attack": 52,
@@ -137824,7 +137824,7 @@
         "types": [
           "Fairy"
         ],
-        "sprite": "assets/sprites/floetteeternal.png",
+        "sprite": "assets/sprites/floette.png",
         "baseStats": {
           "hp": 74,
           "attack": 65,
@@ -152335,7 +152335,7 @@
           "Bug",
           "Flying"
         ],
-        "sprite": "assets/sprites/vivillon.png",
+        "sprite": "assets/sprites/vivillonfancy.png",
         "baseStats": {
           "hp": 80,
           "attack": 52,
@@ -182299,7 +182299,7 @@
         "types": [
           "Fairy"
         ],
-        "sprite": "assets/sprites/floetteeternal.png",
+        "sprite": "assets/sprites/floette.png",
         "baseStats": {
           "hp": 74,
           "attack": 65,
