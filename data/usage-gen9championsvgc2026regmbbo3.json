@@ -3060,7 +3060,7 @@
             "pct": 0
           },
           {
-            "name": "Rotomwash",
+            "name": "Rotom-Wash",
             "pct": 0
           },
           {
@@ -3400,7 +3400,7 @@
             "pct": 0
           },
           {
-            "name": "Rotomwash",
+            "name": "Rotom-Wash",
             "pct": 0
           }
         ]
@@ -4363,7 +4363,7 @@
             "pct": 0
           },
           {
-            "name": "Rotomwash",
+            "name": "Rotom-Wash",
             "pct": 0
           }
         ]
@@ -6253,7 +6253,7 @@
         ]
       },
       {
-        "name": "Rotomwash",
+        "name": "Rotom-Wash",
         "types": [
           "Electric",
           "Water"
@@ -13190,7 +13190,7 @@
         "usage": 0.8,
         "teammates": [
           {
-            "name": "Rotomheat",
+            "name": "Rotom-Heat",
             "pct": 24
           },
           {
@@ -13198,7 +13198,7 @@
             "pct": 19.4
           },
           {
-            "name": "Rotomwash",
+            "name": "Rotom-Wash",
             "pct": 16.7
           },
           {
@@ -13298,7 +13298,7 @@
         ],
         "checks": [
           {
-            "name": "Rotomwash",
+            "name": "Rotom-Wash",
             "pct": 0
           },
           {
@@ -13324,7 +13324,7 @@
         ]
       },
       {
-        "name": "Rotomheat",
+        "name": "Rotom-Heat",
         "types": [
           "Electric",
           "Fire"
@@ -13490,7 +13490,7 @@
             "pct": 0
           },
           {
-            "name": "Rotomwash",
+            "name": "Rotom-Wash",
             "pct": 0
           }
         ]
@@ -15396,7 +15396,7 @@
             "pct": 38.8
           },
           {
-            "name": "Rotomwash",
+            "name": "Rotom-Wash",
             "pct": 33.2
           },
           {
@@ -16760,7 +16760,7 @@
             "pct": 16.4
           },
           {
-            "name": "Rotomwash",
+            "name": "Rotom-Wash",
             "pct": 11.2
           }
         ],
@@ -17495,7 +17495,7 @@
             "pct": 0
           },
           {
-            "name": "Rotomwash",
+            "name": "Rotom-Wash",
             "pct": 0
           },
           {
@@ -18865,7 +18865,7 @@
             "pct": 17.4
           },
           {
-            "name": "Rotomwash",
+            "name": "Rotom-Wash",
             "pct": 16.8
           }
         ],
@@ -28615,7 +28615,7 @@
         ]
       },
       {
-        "name": "Rotommow",
+        "name": "Rotom-Mow",
         "types": [
           "Electric",
           "Grass"
@@ -29779,7 +29779,7 @@
         "usage": 0.2,
         "teammates": [
           {
-            "name": "Rotomwash",
+            "name": "Rotom-Wash",
             "pct": 27.5
           },
           {
@@ -32090,7 +32090,7 @@
         ]
       },
       {
-        "name": "Rotomfrost",
+        "name": "Rotom-Frost",
         "types": [
           "Electric",
           "Ice"
@@ -33560,7 +33560,7 @@
             "pct": 29.3
           },
           {
-            "name": "Rotomfrost",
+            "name": "Rotom-Frost",
             "pct": 14.5
           },
           {
@@ -36624,7 +36624,7 @@
             "pct": 8.2
           },
           {
-            "name": "Rotomwash",
+            "name": "Rotom-Wash",
             "pct": 7.9
           }
         ],
@@ -37636,7 +37636,7 @@
         "usage": 0.1,
         "teammates": [
           {
-            "name": "Rotomwash",
+            "name": "Rotom-Wash",
             "pct": 14.9
           },
           {
@@ -38272,7 +38272,7 @@
             "pct": 15.8
           },
           {
-            "name": "Rotommow",
+            "name": "Rotom-Mow",
             "pct": 15.5
           },
           {
@@ -38742,7 +38742,7 @@
             "pct": 16.4
           },
           {
-            "name": "Rotomwash",
+            "name": "Rotom-Wash",
             "pct": 16.4
           },
           {
@@ -46698,7 +46698,7 @@
         "checks": []
       },
       {
-        "name": "Rotomfan",
+        "name": "Rotom-Fan",
         "types": [
           "Electric",
           "Flying"
@@ -47306,7 +47306,7 @@
         "usage": 0,
         "teammates": [
           {
-            "name": "Rotomwash",
+            "name": "Rotom-Wash",
             "pct": 17.4
           },
           {
@@ -51556,7 +51556,7 @@
             "pct": 0
           },
           {
-            "name": "Rotomwash",
+            "name": "Rotom-Wash",
             "pct": 0
           },
           {
@@ -52532,7 +52532,7 @@
             "pct": 0
           },
           {
-            "name": "Rotomwash",
+            "name": "Rotom-Wash",
             "pct": 0
           },
           {
@@ -53039,7 +53039,7 @@
             "pct": 0
           },
           {
-            "name": "Rotomwash",
+            "name": "Rotom-Wash",
             "pct": 0
           },
           {
@@ -55792,7 +55792,7 @@
         ]
       },
       {
-        "name": "Rotomwash",
+        "name": "Rotom-Wash",
         "types": [
           "Electric",
           "Water"
@@ -61707,7 +61707,7 @@
         ]
       },
       {
-        "name": "Rotomheat",
+        "name": "Rotom-Heat",
         "types": [
           "Electric",
           "Fire"
@@ -63235,7 +63235,7 @@
         "usage": 0.4,
         "teammates": [
           {
-            "name": "Rotomheat",
+            "name": "Rotom-Heat",
             "pct": 31.4
           },
           {
@@ -63243,7 +63243,7 @@
             "pct": 24
           },
           {
-            "name": "Rotomwash",
+            "name": "Rotom-Wash",
             "pct": 20.8
           },
           {
@@ -63727,7 +63727,7 @@
             "pct": 21.9
           },
           {
-            "name": "Rotomwash",
+            "name": "Rotom-Wash",
             "pct": 21.6
           },
           {
@@ -66379,7 +66379,7 @@
             "pct": 44.5
           },
           {
-            "name": "Rotomwash",
+            "name": "Rotom-Wash",
             "pct": 40.1
           },
           {
@@ -73992,7 +73992,7 @@
             "pct": 45.7
           },
           {
-            "name": "Rotomwash",
+            "name": "Rotom-Wash",
             "pct": 43.1
           },
           {
@@ -74376,7 +74376,7 @@
         "checks": []
       },
       {
-        "name": "Rotommow",
+        "name": "Rotom-Mow",
         "types": [
           "Electric",
           "Grass"
@@ -75699,7 +75699,7 @@
             "pct": 18.6
           },
           {
-            "name": "Rotomwash",
+            "name": "Rotom-Wash",
             "pct": 12.6
           },
           {
@@ -77752,7 +77752,7 @@
         "checks": []
       },
       {
-        "name": "Rotomfrost",
+        "name": "Rotom-Frost",
         "types": [
           "Electric",
           "Ice"
@@ -83677,7 +83677,7 @@
             "pct": 21.9
           },
           {
-            "name": "Rotommow",
+            "name": "Rotom-Mow",
             "pct": 21.7
           },
           {
@@ -101312,7 +101312,7 @@
         ]
       },
       {
-        "name": "Rotomwash",
+        "name": "Rotom-Wash",
         "types": [
           "Electric",
           "Water"
@@ -106233,7 +106233,7 @@
         "checks": []
       },
       {
-        "name": "Rotomheat",
+        "name": "Rotom-Heat",
         "types": [
           "Electric",
           "Fire"
@@ -111289,11 +111289,11 @@
         "usage": 0.1,
         "teammates": [
           {
-            "name": "Rotomheat",
+            "name": "Rotom-Heat",
             "pct": 35.5
           },
           {
-            "name": "Rotomwash",
+            "name": "Rotom-Wash",
             "pct": 32.7
           },
           {
@@ -111705,7 +111705,7 @@
             "pct": 51.9
           },
           {
-            "name": "Rotomwash",
+            "name": "Rotom-Wash",
             "pct": 46.1
           },
           {
@@ -113105,7 +113105,7 @@
             "pct": 80.5
           },
           {
-            "name": "Rotomwash",
+            "name": "Rotom-Wash",
             "pct": 75.5
           },
           {
@@ -116201,7 +116201,7 @@
         "checks": []
       },
       {
-        "name": "Rotommow",
+        "name": "Rotom-Mow",
         "types": [
           "Electric",
           "Grass"
@@ -119372,7 +119372,7 @@
         "checks": []
       },
       {
-        "name": "Rotomfrost",
+        "name": "Rotom-Frost",
         "types": [
           "Electric",
           "Ice"
@@ -119711,7 +119711,7 @@
             "pct": 47.9
           },
           {
-            "name": "Rotomwash",
+            "name": "Rotom-Wash",
             "pct": 16.6
           }
         ],
@@ -120831,7 +120831,7 @@
             "pct": 31.9
           },
           {
-            "name": "Rotomheat",
+            "name": "Rotom-Heat",
             "pct": 31.6
           },
           {
@@ -134998,7 +134998,7 @@
         "checks": []
       },
       {
-        "name": "Rotomwash",
+        "name": "Rotom-Wash",
         "types": [
           "Electric",
           "Water"
@@ -142957,7 +142957,7 @@
         "checks": []
       },
       {
-        "name": "Rotomheat",
+        "name": "Rotom-Heat",
         "types": [
           "Electric",
           "Fire"
@@ -145136,7 +145136,7 @@
             "pct": 90.9
           },
           {
-            "name": "Rotomwash",
+            "name": "Rotom-Wash",
             "pct": 89.3
           },
           {
@@ -147904,7 +147904,7 @@
             "pct": 42.8
           },
           {
-            "name": "Rotomwash",
+            "name": "Rotom-Wash",
             "pct": 41.2
           },
           {
@@ -148169,11 +148169,11 @@
         "usage": 0,
         "teammates": [
           {
-            "name": "Rotomheat",
+            "name": "Rotom-Heat",
             "pct": 36.3
           },
           {
-            "name": "Rotomwash",
+            "name": "Rotom-Wash",
             "pct": 32.7
           },
           {
@@ -148711,7 +148711,7 @@
         "checks": []
       },
       {
-        "name": "Rotommow",
+        "name": "Rotom-Mow",
         "types": [
           "Electric",
           "Grass"
