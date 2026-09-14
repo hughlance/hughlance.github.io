@@ -48,6 +48,7 @@
 import { writeFile, mkdir, readFile, access } from "node:fs/promises";
 import path from "node:path";
 import { toId, titleCase, guessPokeApiSlug, guessDisplayName, guessChampionsAssetName } from "./species-naming.mjs";
+import { downloadItemSprites } from "./item-assets.mjs";
 
 // Surface ANY failure, no matter where it happens — a silent exit with
 // no error message (which is what you hit) means something threw
@@ -479,6 +480,19 @@ async function run() {
         console.error(`    ✗ ${slug}-${rating} failed: ${err.message}`);
         console.error(`      Continuing with remaining ratings/formats rather than stopping here.`);
         byRating[rating] = []; // keep going — an empty rating beats losing the whole run
+      }
+    }
+
+    const itemNames = [];
+    for (const rating of Object.values(byRating)){
+      for (const mon of rating){
+        itemNames.push(...(mon.items || []).map(item => item.name));
+      }
+    }
+    const itemSprites = await downloadItemSprites(itemNames, path.join(process.cwd(), "assets", "items"));
+    for (const rating of Object.values(byRating)){
+      for (const mon of rating){
+        for (const item of mon.items || []) item.sprite = itemSprites.get(item.name) || null;
       }
     }
 

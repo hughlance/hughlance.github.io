@@ -133,9 +133,12 @@
   .tag-cloud{ display:flex; flex-wrap:wrap; gap: 6px; }
   .tag{ font-family:'JetBrains Mono', monospace; font-size: 0.7rem; background: var(--surface-2); border: 1px solid var(--line); padding: 4px 9px; border-radius: 10px; color: var(--text-muted); }
 
-  .teammate-pill{ font-family:'JetBrains Mono', monospace; font-size: 0.74rem; background: var(--surface-2); border: 1px solid var(--line); padding: 6px 12px; border-radius: 12px; color: var(--text); cursor:pointer; display:inline-block; }
-  .teammate-pill:hover{ border-color: var(--accent-2); }
-  .teammate-pill b{ color: var(--accent-2); }
+  .teammate-list{ display:flex; flex-direction:column; gap:6px; }
+  .teammate-row{ display:flex; align-items:center; gap:9px; width:100%; padding:5px 7px; border:1px solid var(--line); border-radius:4px; background:var(--surface-2); color:var(--text); cursor:pointer; text-align:left; }
+  .teammate-row:hover{ border-color:var(--accent-2); }
+  .related-avatar{ width:28px; height:28px; object-fit:contain; flex-shrink:0; }
+  .related-name{ flex:1; min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; font-size:0.8rem; }
+  .teammate-row b{ color:var(--accent-2); font-family:'JetBrains Mono', monospace; font-size:0.72rem; }
 
   .bar-row.clickable{ cursor: pointer; border-radius: 3px; padding: 3px 4px; margin: 0 -4px 6px; }
   .bar-row.clickable:hover{ background: var(--surface-2); }
@@ -154,6 +157,8 @@
   .select-btn.disabled:hover{ border-color: var(--line); }
   .select-btn.disabled.active{ background: rgba(232,197,71,0.06); }
   .select-name{ overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+  .select-icon{ width:24px; height:24px; object-fit:contain; flex-shrink:0; }
+  .select-name-wrap{ display:flex; align-items:center; gap:8px; min-width:0; overflow:hidden; }
   .select-pct{ font-family:'JetBrains Mono', monospace; font-size: 0.74rem; color: var(--accent-2); flex-shrink:0; }
   .select-pct.muted{ color: var(--text-muted); }
   .select-btn.active .select-pct{ color: var(--accent); }
@@ -304,6 +309,15 @@ function resolveSprite(sprite){
   return sprite.startsWith("http") ? sprite : "../" + sprite;
 }
 
+function resolveItemSprite(entry){
+  if (entry?.sprite) return resolveSprite(entry.sprite);
+  const slug = String(entry?.name || "").toLowerCase()
+    .replace(/[’']/g, "")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-|-$/g, "");
+  return slug ? `../assets/items/${slug}.png` : null;
+}
+
 let state = {
   source: "champions",     // 'bo1' | 'bo3' | 'champions'
   eloRating: 1760,          // smogon only
@@ -396,25 +410,20 @@ async function renderSidebarList(){
   if (state.source === "champions"){
     try {
       const dex = await loadPokedex();
-      rows = Object.values(dex.pokemon)
+      const allRows = Object.values(dex.pokemon)
         .map(p => ({
           key: p.showdownId, name: p.name, types: p.types,
           sprite: resolveSprite(p.sprite), metric: p[state.champFormat]?.rank ?? null,
-        }))
+        }));
+      rows = allRows
+        .filter(r => r.metric !== null)
         .sort((a, b) => {
-          const aRanked = a.metric !== null;
-          const bRanked = b.metric !== null;
-          if (aRanked && bRanked) return a.metric - b.metric;
-          if (aRanked) return -1;
-          if (bRanked) return 1;
-          return a.name.localeCompare(b.name);
+          return a.metric - b.metric;
         });
-      const rankedCount = rows.filter(r => r.metric !== null).length;
-      const unrankedCount = rows.length - rankedCount;
-      setFlag(
-        `Live: Champions Battle Data · ${rows.length} shown (${rankedCount} ranked, ${unrankedCount} unranked/new) · index count: ${dex.count}`,
-        true
-      );
+      const fetchedDate = dex.generatedAt
+        ? dex.generatedAt.slice(0, 10).split("-").reverse().join("-")
+        : "unknown date";
+      setFlag(`Live: Champions Battle Data · ${fetchedDate}`, true);
     } catch {
       setFlag("Champions data not available — run scripts/fetch-pokedex.mjs", false);
       rows = [];
@@ -426,7 +435,9 @@ async function renderSidebarList(){
     } else {
       try {
         const data = await loadSmogonFormat(entry);
-        setFlag(`Live: ${data.label} · ${data.month}`, true);
+        const shortLabel = data.label.replace(/\s*\([^)]*\)/, "");
+        const displayMonth = data.month.split("-").reverse().join("-");
+        setFlag(`Live: ${shortLabel} · ${displayMonth}`, true);
         const list = data.ratings[state.eloRating] || [];
         rows = list.map(d => ({ key: d.name, name: d.name, types: d.types?.length ? d.types : ["Unknown"], sprite: resolveSprite(d.sprite), metric: d.usage }));
       } catch {
@@ -596,7 +607,7 @@ function shortenEvDisplay(raw){
   return raw.replace(/\s*(HP|Atk|Def|SpA|SpD|Spe)\b/gi, "").replace(/\s+/g, "").trim();
 }
 
-function selectableList(entries, emptyText, { isActive, onPick, multi = false, maxPicks = 4, compactEv = false, disabled = false, disabledNote = null } = {}){
+function selectableList(entries, emptyText, { isActive, onPick, multi = false, maxPicks = 4, compactEv = false, showIcons = false, disabled = false, disabledNote = null } = {}){
   const wrap = document.createElement("div");
   wrap.className = "select-list";
   // Defensive: some upstream rows arrive with a blank name (seen for
@@ -621,13 +632,27 @@ function selectableList(entries, emptyText, { isActive, onPick, multi = false, m
     btn.className = "select-btn" + (active ? " active" : "") + (disabled ? " disabled" : "");
     btn.disabled = disabled;
     const val = e.pct ?? e.topPercentage ?? null;
+    const nameWrap = document.createElement("span");
+    nameWrap.className = "select-name-wrap";
+    if (showIcons) {
+      const iconPath = resolveItemSprite(e);
+      if (iconPath){
+        const icon = document.createElement("img");
+        icon.className = "select-icon";
+        icon.alt = "";
+        icon.src = iconPath;
+        icon.onerror = () => { icon.style.display = "none"; };
+        nameWrap.appendChild(icon);
+      }
+    }
     const nameSpan = document.createElement("span");
     nameSpan.className = "select-name";
     nameSpan.textContent = compactEv ? shortenEvDisplay(e.name) : e.name;
     const pctSpan = document.createElement("span");
     pctSpan.className = "select-pct" + (val === null ? " muted" : "");
     pctSpan.textContent = val !== null ? val.toFixed(1) + "%" : "#" + (i + 1);
-    btn.appendChild(nameSpan);
+    nameWrap.appendChild(nameSpan);
+    btn.appendChild(nameWrap);
     btn.appendChild(pctSpan);
     if (!disabled) btn.onclick = () => onPick(e.name, active);
     wrap.appendChild(btn);
@@ -662,6 +687,39 @@ function statBarList(baseStats){
 const STAT_COLORS = { "HP": "#E85D5D", "Attack": "#F0A030", "Defense": "#F0D030", "Sp. Atk": "#5088F0", "Sp. Def": "#4CAF6D", "Speed": "#F06FA8" };
 
 // Small inline sparkline (no box/border) showing usage across the four
+function renderRelatedList(entries, emptyText, onSelect){
+  const wrap = document.createElement("div");
+  wrap.className = "teammate-list";
+  if (!entries?.length){
+    wrap.innerHTML = `<div class="empty-note">${emptyText}</div>`;
+    return wrap;
+  }
+  entries.forEach(entry => {
+    const row = document.createElement("button");
+    row.type = "button";
+    row.className = "teammate-row";
+    if (entry.sprite){
+      const avatar = document.createElement("img");
+      avatar.className = "related-avatar";
+      avatar.alt = "";
+      avatar.src = entry.sprite;
+      avatar.onerror = () => { avatar.style.display = "none"; };
+      row.appendChild(avatar);
+    }
+    const name = document.createElement("span");
+    name.className = "related-name";
+    name.textContent = entry.name;
+    row.appendChild(name);
+    if (typeof entry.pct === "number"){
+      const pct = document.createElement("b");
+      pct.textContent = entry.pct.toFixed(1) + "%";
+      row.appendChild(pct);
+    }
+    row.onclick = () => onSelect(entry.name);
+    wrap.appendChild(row);
+  });
+  return wrap;
+}
 // ELO cutoffs — sits next to the "Usage @ X+" metric instead of a full
 // bottom panel.
 function renderEloSparkline(series, highlightRating){
@@ -745,12 +803,15 @@ function normalizeChampionsMon(mon, dex){
     sparkline: null,
     categories: [
       { title: "Moves", key: "moves", entries: fmtData.moves, multi: true },
-      { title: "Items", key: "items", entries: fmtData.items },
+      { title: "Items", key: "items", entries: fmtData.items, showIcons: true },
       { title: "Abilities", key: "abilities", entries: fmtData.abilities },
       { title: "Natures", key: "natures", entries: fmtData.natures },
       { title: "EV spreads", key: "evSpreads", entries: fmtData.evSpreads, compactEv: true },
     ],
-    teammates: fmtData.teammates,
+    teammates: (fmtData.teammates || []).map(t => ({
+      ...t,
+      sprite: resolveSprite(Object.values(dex.pokemon).find(p => p.name === t.name)?.sprite),
+    })),
     teammatesNote: null,
     checks: null,
     exportBaseName: mon.name,
@@ -772,6 +833,10 @@ function normalizeSmogonMon(mon, data){
   // regardless of which ELO tab is active for usage.
   const synergyRating = ratingKeys.includes(1760) ? 1760 : ratingKeys[ratingKeys.length - 1];
   const synergyMon = (data.ratings[synergyRating] || []).find(d => d.name === mon.name);
+  const spriteByName = new Map();
+  Object.values(data.ratings).flat().forEach(d => {
+    if (d.name && d.sprite && !spriteByName.has(d.name)) spriteByName.set(d.name, resolveSprite(d.sprite));
+  });
 
   const sparkline = ratingKeys.map(r => {
     const found = (data.ratings[r] || []).find(d => d.name === mon.name);
@@ -811,14 +876,14 @@ function normalizeSmogonMon(mon, data){
     sparkline,
     categories: [
       { title: "Moves", key: "moves", entries: mon.moves, multi: true },
-      { title: "Items", key: "items", entries: mon.items },
+      { title: "Items", key: "items", entries: mon.items, showIcons: true },
       { title: "Abilities", key: "abilities", entries: mon.abilities },
       { title: "Natures", key: "natures", entries: mon.natures },
       { title: "EV spreads", key: "evSpreads", entries: mon.evSpreads, compactEv: true },
     ],
-    teammates: synergyMon?.teammates,
+    teammates: (synergyMon?.teammates || []).map(t => ({ ...t, sprite: spriteByName.get(t.name) || null })),
     teammatesNote: `${synergyRating === 0 ? "0+" : synergyRating + "+"}`,
-    checks: mon.checks,
+    checks: (mon.checks || []).map(c => ({ ...c, sprite: spriteByName.get(c.name) || null })),
     exportBaseName: stripMegaSuffix(mon.name),
     defaultAbilityOverride,
     // Mega abilities are fixed (the pre-Mega ability, or a hardcoded
@@ -936,6 +1001,7 @@ function renderUnifiedDetail(main, norm){
       const locked = cat.key === "abilities" && norm.abilitiesLocked;
       opts = {
         compactEv: !!cat.compactEv,
+        showIcons: !!cat.showIcons,
         isActive: (n) => currentBuild[field] === n,
         onPick: (n) => { currentBuild[field] = n; rerender(); },
         disabled: locked,
@@ -951,19 +1017,7 @@ function renderUnifiedDetail(main, norm){
   const teamCard = document.createElement("div");
   teamCard.className = "card";
   teamCard.innerHTML = `<h3>Top teammates${norm.teammatesNote ? ` <span style="color:var(--text-muted); font-weight:400; font-size:0.72rem;">(${norm.teammatesNote})</span>` : ""}</h3>`;
-  const teamCloud = document.createElement("div");
-  teamCloud.className = "tag-cloud";
-  if (norm.teammates?.length){
-    norm.teammates.forEach(t => {
-      const pill = document.createElement("span");
-      pill.className = "teammate-pill";
-      pill.innerHTML = t.name + (typeof t.pct === "number" ? " <b>" + t.pct.toFixed(1) + "%</b>" : "");
-      pill.onclick = () => norm.onSelectRelated(t.name);
-      teamCloud.appendChild(pill);
-    });
-  } else {
-    teamCloud.innerHTML = '<div class="empty-note">No teammate data.</div>';
-  }
+  const teamCloud = renderRelatedList(norm.teammates, "No teammate data.", norm.onSelectRelated);
   const teamBody = document.createElement("div"); teamBody.className = "card-body";
   teamBody.appendChild(teamCloud);
   teamCard.appendChild(teamBody);
@@ -973,19 +1027,7 @@ function renderUnifiedDetail(main, norm){
     const checksCard = document.createElement("div");
     checksCard.className = "card";
     checksCard.innerHTML = "<h3>Checks & Counters</h3>";
-    const checksCloud = document.createElement("div");
-    checksCloud.className = "tag-cloud";
-    if (norm.checks.length){
-      norm.checks.forEach(c => {
-        const pill = document.createElement("span");
-        pill.className = "teammate-pill";
-        pill.innerHTML = c.name + " <b>" + c.pct.toFixed(1) + "%</b>";
-        pill.onclick = () => norm.onSelectRelated(c.name);
-        checksCloud.appendChild(pill);
-      });
-    } else {
-      checksCloud.innerHTML = '<div class="empty-note">No checks/counters data at this cutoff.</div>';
-    }
+    const checksCloud = renderRelatedList(norm.checks, "No checks/counters data at this cutoff.", norm.onSelectRelated);
     const checksBody = document.createElement("div"); checksBody.className = "card-body";
     checksBody.appendChild(checksCloud);
     checksCard.appendChild(checksBody);

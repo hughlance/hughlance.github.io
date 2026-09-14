@@ -36,6 +36,7 @@
 import { writeFile, mkdir, access } from "node:fs/promises";
 import path from "node:path";
 import { toId, deriveShowdownId, deriveDisplayName, derivePokeApiSlug, guessPokeApiSlug, guessDisplayName } from "./species-naming.mjs";
+import { downloadItemSprites } from "./item-assets.mjs";
 
 process.on("unhandledRejection", (err) => {
   console.error("UNHANDLED REJECTION:", err?.stack || err);
@@ -518,6 +519,21 @@ async function run() {
     }
   }
   if (namesCleaned) console.log(`  Cleaned ${namesCleaned} entries with a raw suffix word still in their name.`);
+
+  const itemNames = [];
+  for (const entry of Object.values(pokedex)){
+    for (const format of ["doubles", "singles"]){
+      itemNames.push(...(entry[format]?.items || []).map(item => item.name));
+    }
+  }
+  const itemSprites = await downloadItemSprites(itemNames, path.join(process.cwd(), "assets", "items"));
+  for (const entry of Object.values(pokedex)){
+    for (const format of ["doubles", "singles"]){
+      for (const item of entry[format]?.items || []){
+        item.sprite = itemSprites.get(item.name) || null;
+      }
+    }
+  }
 
   await writeFile(
     OUT_FILE,
