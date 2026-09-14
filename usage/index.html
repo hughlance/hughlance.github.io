@@ -710,7 +710,7 @@ function renderRelatedList(entries, emptyText, onSelect){
     name.className = "related-name";
     name.textContent = entry.name;
     row.appendChild(name);
-    if (typeof entry.pct === "number"){
+    if (typeof entry.pct === "number" && entry.pct > 0){
       const pct = document.createElement("b");
       pct.textContent = entry.pct.toFixed(1) + "%";
       row.appendChild(pct);
