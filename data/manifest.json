@@ -3,7 +3,7 @@
     "label": "Regulation M-B — Bo1 (Ladder, Closed Teamsheet)",
     "slug": "gen9championsvgc2026regmb",
     "file": "usage-gen9championsvgc2026regmb.json",
-    "month": "2026-08",
+    "month": "2026-09",
     "availableRatings": [
       0,
       1500,
@@ -15,7 +15,31 @@
     "label": "Regulation M-B — Bo3 (Open Teamsheet)",
     "slug": "gen9championsvgc2026regmbbo3",
     "file": "usage-gen9championsvgc2026regmbbo3.json",
-    "month": "2026-08",
+    "month": "2026-09",
+    "availableRatings": [
+      0,
+      1500,
+      1630,
+      1760
+    ]
+  },
+  {
+    "label": "Regulation M-C — Bo1 (Ladder, Closed Teamsheet)",
+    "slug": "gen9championsvgc2026regmc",
+    "file": "usage-gen9championsvgc2026regmc.json",
+    "month": "2026-09",
+    "availableRatings": [
+      0,
+      1500,
+      1630,
+      1760
+    ]
+  },
+  {
+    "label": "Regulation M-C — Bo3 (Open Teamsheet)",
+    "slug": "gen9championsvgc2026regmcbo3",
+    "file": "usage-gen9championsvgc2026regmcbo3.json",
+    "month": "2026-09",
     "availableRatings": [
       0,
       1500,
