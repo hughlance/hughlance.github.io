@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-27T16:03:32.255Z",
+  "generatedAt": "2026-11-27T15:59:03.835Z",
   "count": 263,
   "pokemon": {
     "abomasnow": {
@@ -65025,154 +65025,151 @@
         "moves": [
           {
             "name": "Play Rough",
-            "topPercentage": 96.6
+            "pct": 96.6
           },
           {
-            "name": "Sucker Punch"
+            "name": "Sucker Punch",
+            "pct": 81.6
           },
           {
-            "name": "Protect"
+            "name": "Protect",
+            "pct": 76.8
           },
           {
-            "name": "Iron Head"
+            "name": "Iron Head",
+            "pct": 63.7
           },
           {
-            "name": "Rock Slide"
+            "name": "Rock Slide",
+            "pct": 41.1
           },
           {
-            "name": "Swords Dance"
+            "name": "Swords Dance",
+            "pct": 15.1
           },
           {
-            "name": "Brick Break"
+            "name": "Brick Break",
+            "pct": 5.4
           },
           {
-            "name": "Knock Off"
+            "name": "Knock Off",
+            "pct": 5.2
           },
           {
-            "name": "Fire Fang"
+            "name": "Fire Fang",
+            "pct": 3.8
           },
           {
-            "name": "Thunder Punch"
+            "name": "Thunder Punch",
+            "pct": 2.9
           }
         ],
         "items": [
           {
             "name": "Mawilite",
-            "topPercentage": 99.1,
+            "pct": 99.1,
             "sprite": "assets/items/mawilite.png"
           },
           {
             "name": "Choice Scarf",
+            "pct": 0.1,
             "sprite": "assets/items/choice-scarf.png"
           },
           {
             "name": "Life Orb",
+            "pct": 0.1,
             "sprite": "assets/items/life-orb.png"
           },
           {
             "name": "Focus Sash",
+            "pct": 0.1,
             "sprite": "assets/items/focus-sash.png"
           },
           {
             "name": "Muscle Band",
+            "pct": 0,
             "sprite": "assets/items/muscle-band.png"
           },
           {
             "name": "Rocky Helmet",
+            "pct": 0,
             "sprite": "assets/items/rocky-helmet.png"
           },
           {
             "name": "Fairy Feather",
+            "pct": 0,
             "sprite": "assets/items/fairy-feather.png"
           },
           {
             "name": "Expert Belt",
+            "pct": 0,
             "sprite": "assets/items/expert-belt.png"
           },
           {
             "name": "Sitrus Berry",
+            "pct": 0,
             "sprite": "assets/items/sitrus-berry.png"
           },
           {
             "name": "Lum Berry",
+            "pct": 0,
             "sprite": "assets/items/lum-berry.png"
           }
         ],
         "abilities": [
           {
             "name": "Intimidate",
-            "topPercentage": 55.2
+            "pct": 55.2
           },
           {
-            "name": "Hyper Cutter"
+            "name": "Hyper Cutter",
+            "pct": 42
           },
           {
-            "name": "Sheer Force"
-          }
-        ],
-        "teammates": [
-          {
-            "name": "Farigiraf"
-          },
-          {
-            "name": "Incineroar"
-          },
-          {
-            "name": "Torkoal"
-          },
-          {
-            "name": "Indeedee-F"
-          },
-          {
-            "name": "Rillaboom"
-          },
-          {
-            "name": "Pelipper"
-          },
-          {
-            "name": "Archaludon"
-          },
-          {
-            "name": "Hatterene"
-          },
-          {
-            "name": "Garchomp"
-          },
-          {
-            "name": "Sinistcha"
+            "name": "Sheer Force",
+            "pct": 2.8
           }
         ],
         "natures": [
           {
             "name": "Brave",
-            "topPercentage": 62.1
+            "pct": 62.1
           },
           {
-            "name": "Adamant"
+            "name": "Adamant",
+            "pct": 34.2
           },
           {
-            "name": "Careful"
+            "name": "Careful",
+            "pct": 0.9
           },
           {
-            "name": "Jolly"
+            "name": "Jolly",
+            "pct": 0.7
           },
           {
-            "name": "Sassy"
+            "name": "Sassy",
+            "pct": 0.7
           },
           {
-            "name": "Impish"
+            "name": "Impish",
+            "pct": 0.4
           },
           {
-            "name": "Relaxed"
+            "name": "Relaxed",
+            "pct": 0.3
           },
           {
-            "name": "Lax"
+            "name": "Lax",
+            "pct": 0.2
           },
           {
-            "name": "Naughty"
+            "name": "Naughty",
+            "pct": 0.1
           },
           {
-            "name": "Docile"
+            "name": "Docile",
+            "pct": 0.1
           }
         ],
         "evSpreads": [
@@ -65206,6 +65203,48 @@
           {
             "name": "HP 0 / Atk 32 / Def 32 / SpA 0 / SpD 2 / Spe 0"
           }
+        ],
+        "teammates": [
+          {
+            "name": "Farigiraf",
+            "pct": 0
+          },
+          {
+            "name": "Incineroar",
+            "pct": 0
+          },
+          {
+            "name": "Torkoal",
+            "pct": 0
+          },
+          {
+            "name": "Indeedee-F",
+            "pct": 0
+          },
+          {
+            "name": "Rillaboom",
+            "pct": 0
+          },
+          {
+            "name": "Pelipper",
+            "pct": 0
+          },
+          {
+            "name": "Archaludon",
+            "pct": 0
+          },
+          {
+            "name": "Hatterene",
+            "pct": 0
+          },
+          {
+            "name": "Garchomp",
+            "pct": 0
+          },
+          {
+            "name": "Sinistcha",
+            "pct": 0
+          }
         ]
       },
       "singles": {
@@ -65213,154 +65252,151 @@
         "moves": [
           {
             "name": "Play Rough",
-            "topPercentage": 98.2
+            "pct": 98.2
           },
           {
-            "name": "Sucker Punch"
+            "name": "Sucker Punch",
+            "pct": 93.5
           },
           {
-            "name": "Fire Fang"
+            "name": "Fire Fang",
+            "pct": 65.2
           },
           {
-            "name": "Swords Dance"
+            "name": "Swords Dance",
+            "pct": 42.2
           },
           {
-            "name": "Ice Punch"
+            "name": "Ice Punch",
+            "pct": 28.2
           },
           {
-            "name": "Iron Head"
+            "name": "Iron Head",
+            "pct": 25.5
           },
           {
-            "name": "Thunder Punch"
+            "name": "Thunder Punch",
+            "pct": 19.7
           },
           {
-            "name": "Knock Off"
+            "name": "Knock Off",
+            "pct": 12.1
           },
           {
-            "name": "Psychic Fangs"
+            "name": "Psychic Fangs",
+            "pct": 6.6
           },
           {
-            "name": "Brick Break"
+            "name": "Brick Break",
+            "pct": 2
           }
         ],
         "items": [
           {
             "name": "Mawilite",
-            "topPercentage": 99.5,
+            "pct": 99.5,
             "sprite": "assets/items/mawilite.png"
           },
           {
             "name": "Focus Sash",
+            "pct": 0.1,
             "sprite": "assets/items/focus-sash.png"
           },
           {
             "name": "Life Orb",
+            "pct": 0.1,
             "sprite": "assets/items/life-orb.png"
           },
           {
             "name": "Sitrus Berry",
+            "pct": 0,
             "sprite": "assets/items/sitrus-berry.png"
           },
           {
             "name": "Air Balloon",
+            "pct": 0,
             "sprite": "assets/items/air-balloon.png"
           },
           {
             "name": "Rocky Helmet",
+            "pct": 0,
             "sprite": "assets/items/rocky-helmet.png"
           },
           {
             "name": "Quick Claw",
+            "pct": 0,
             "sprite": "assets/items/quick-claw.png"
           },
           {
             "name": "Occa Berry",
+            "pct": 0,
             "sprite": "assets/items/occa-berry.png"
           },
           {
             "name": "Leftovers",
+            "pct": 0,
             "sprite": "assets/items/leftovers.png"
           },
           {
             "name": "Shuca Berry",
+            "pct": 0,
             "sprite": "assets/items/shuca-berry.png"
           }
         ],
         "abilities": [
           {
             "name": "Intimidate",
-            "topPercentage": 97.2
+            "pct": 97.2
           },
           {
-            "name": "Hyper Cutter"
+            "name": "Hyper Cutter",
+            "pct": 1.7
           },
           {
-            "name": "Sheer Force"
-          }
-        ],
-        "teammates": [
-          {
-            "name": "Garchomp"
-          },
-          {
-            "name": "Mimikyu"
-          },
-          {
-            "name": "Primarina"
-          },
-          {
-            "name": "Charizard"
-          },
-          {
-            "name": "Archaludon"
-          },
-          {
-            "name": "Basculegion"
-          },
-          {
-            "name": "Meowscarada"
-          },
-          {
-            "name": "Swampert"
-          },
-          {
-            "name": "Hatterene"
-          },
-          {
-            "name": "Greninja"
+            "name": "Sheer Force",
+            "pct": 1.1
           }
         ],
         "natures": [
           {
             "name": "Adamant",
-            "topPercentage": 87.5
+            "pct": 87.5
           },
           {
-            "name": "Brave"
+            "name": "Brave",
+            "pct": 10.1
           },
           {
-            "name": "Jolly"
+            "name": "Jolly",
+            "pct": 0.8
           },
           {
-            "name": "Impish"
+            "name": "Impish",
+            "pct": 0.7
           },
           {
-            "name": "Careful"
+            "name": "Careful",
+            "pct": 0.4
           },
           {
-            "name": "Naughty"
+            "name": "Naughty",
+            "pct": 0.1
           },
           {
-            "name": "Lonely"
+            "name": "Lonely",
+            "pct": 0.1
           },
           {
-            "name": "Relaxed"
+            "name": "Relaxed",
+            "pct": 0.1
           },
           {
-            "name": "Sassy"
+            "name": "Sassy",
+            "pct": 0.1
           },
           {
-            "name": "Bold"
+            "name": "Bold",
+            "pct": 0
           }
         ],
         "evSpreads": [
@@ -65394,6 +65430,48 @@
           {
             "name": "HP 16 / Atk 32 / Def 0 / SpA 0 / SpD 0 / Spe 18"
           }
+        ],
+        "teammates": [
+          {
+            "name": "Garchomp",
+            "pct": 0
+          },
+          {
+            "name": "Mimikyu",
+            "pct": 0
+          },
+          {
+            "name": "Primarina",
+            "pct": 0
+          },
+          {
+            "name": "Charizard",
+            "pct": 0
+          },
+          {
+            "name": "Archaludon",
+            "pct": 0
+          },
+          {
+            "name": "Basculegion",
+            "pct": 0
+          },
+          {
+            "name": "Meowscarada",
+            "pct": 0
+          },
+          {
+            "name": "Swampert",
+            "pct": 0
+          },
+          {
+            "name": "Hatterene",
+            "pct": 0
+          },
+          {
+            "name": "Greninja",
+            "pct": 0
+          }
         ]
       },
       "sprite": "assets/sprites/mawile.png"
@@ -65426,151 +65504,147 @@
         "moves": [
           {
             "name": "Close Combat",
-            "topPercentage": 62.8
+            "pct": 62.8
           },
           {
-            "name": "Fake Out"
+            "name": "Fake Out",
+            "pct": 57.5
           },
           {
-            "name": "Psycho Cut"
+            "name": "Psycho Cut",
+            "pct": 28.3
           },
           {
-            "name": "Ice Punch"
+            "name": "Ice Punch",
+            "pct": 26.6
           },
           {
-            "name": "Zen Headbutt"
+            "name": "Zen Headbutt",
+            "pct": 21
           },
           {
-            "name": "Rock Slide"
+            "name": "Rock Slide",
+            "pct": 18.7
           },
           {
-            "name": "Poison Jab"
+            "name": "Poison Jab",
+            "pct": 16.8
           },
           {
-            "name": "Drain Punch"
+            "name": "Drain Punch",
+            "pct": 16.4
           },
           {
-            "name": "Protect"
+            "name": "Protect",
+            "pct": 14.6
           },
           {
-            "name": "Skill Swap"
+            "name": "Skill Swap",
+            "pct": 13.6
           }
         ],
         "items": [
           {
             "name": "Medichamite",
-            "topPercentage": 38.1,
+            "pct": 38.1,
             "sprite": "assets/items/medichamite.png"
           },
           {
             "name": "Focus Sash",
+            "pct": 21.8,
             "sprite": "assets/items/focus-sash.png"
           },
           {
             "name": "Iron Ball",
+            "pct": 13.6,
             "sprite": "assets/items/iron-ball.png"
           },
           {
             "name": "Choice Scarf",
+            "pct": 6.5,
             "sprite": "assets/items/choice-scarf.png"
           },
           {
             "name": "Life Orb",
+            "pct": 4.5,
             "sprite": "assets/items/life-orb.png"
           },
           {
             "name": "Sitrus Berry",
+            "pct": 4.2,
             "sprite": "assets/items/sitrus-berry.png"
           },
           {
             "name": "White Herb",
+            "pct": 1.3,
             "sprite": "assets/items/white-herb.png"
           },
           {
             "name": "Quick Claw",
+            "pct": 1.3,
             "sprite": "assets/items/quick-claw.png"
           },
           {
             "name": "Roseli Berry",
+            "pct": 1.2,
             "sprite": "assets/items/roseli-berry.png"
           },
           {
             "name": "Bright Powder",
+            "pct": 1.2,
             "sprite": "assets/items/bright-powder.png"
           }
         ],
         "abilities": [
           {
             "name": "Pure Power",
-            "topPercentage": 88.3
+            "pct": 88.3
           },
           {
-            "name": "Telepathy"
-          }
-        ],
-        "teammates": [
-          {
-            "name": "Farigiraf"
-          },
-          {
-            "name": "Kingambit"
-          },
-          {
-            "name": "Sylveon"
-          },
-          {
-            "name": "Tyranitar"
-          },
-          {
-            "name": "Camerupt"
-          },
-          {
-            "name": "Rillaboom"
-          },
-          {
-            "name": "Indeedee-F"
-          },
-          {
-            "name": "Garchomp"
-          },
-          {
-            "name": "Whimsicott"
-          },
-          {
-            "name": "Milotic"
+            "name": "Telepathy",
+            "pct": 11.7
           }
         ],
         "natures": [
           {
             "name": "Adamant",
-            "topPercentage": 33
+            "pct": 33
           },
           {
-            "name": "Jolly"
+            "name": "Jolly",
+            "pct": 26.7
           },
           {
-            "name": "Brave"
+            "name": "Brave",
+            "pct": 24.5
           },
           {
-            "name": "Careful"
+            "name": "Careful",
+            "pct": 3
           },
           {
-            "name": "Relaxed"
+            "name": "Relaxed",
+            "pct": 2.5
           },
           {
-            "name": "Naive"
+            "name": "Naive",
+            "pct": 2.1
           },
           {
-            "name": "Impish"
+            "name": "Impish",
+            "pct": 2
           },
           {
-            "name": "Sassy"
+            "name": "Sassy",
+            "pct": 1.6
           },
           {
-            "name": "Naughty"
+            "name": "Naughty",
+            "pct": 1.1
           },
           {
-            "name": "Lonely"
+            "name": "Lonely",
+            "pct": 0.9
           }
         ],
         "evSpreads": [
@@ -65603,6 +65677,48 @@
           },
           {
             "name": "HP 0 / Atk 32 / Def 0 / SpA 0 / SpD 0 / Spe 32"
+          }
+        ],
+        "teammates": [
+          {
+            "name": "Farigiraf",
+            "pct": 0
+          },
+          {
+            "name": "Kingambit",
+            "pct": 0
+          },
+          {
+            "name": "Sylveon",
+            "pct": 0
+          },
+          {
+            "name": "Tyranitar",
+            "pct": 0
+          },
+          {
+            "name": "Camerupt",
+            "pct": 0
+          },
+          {
+            "name": "Rillaboom",
+            "pct": 0
+          },
+          {
+            "name": "Indeedee-F",
+            "pct": 0
+          },
+          {
+            "name": "Garchomp",
+            "pct": 0
+          },
+          {
+            "name": "Whimsicott",
+            "pct": 0
+          },
+          {
+            "name": "Milotic",
+            "pct": 0
           }
         ]
       },
